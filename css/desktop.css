@@ -2,7 +2,7 @@
 
 p {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.25vh;
+  /* font-size: 2.25vh; */
   color: #4b5355;
   text-align: left;
   letter-spacing: 0.75px;
@@ -12,7 +12,7 @@ h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 6vh;
-  color: #2B78B7;
+  color: #0f62fe;
   text-align: left;
   letter-spacing: 1px;
 }
@@ -21,7 +21,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 100;
   font-size: 4vh;
-  color: #2B78B7;
+  color: #0f62fe;
   text-align: left;
   letter-spacing: 1px;
 }
@@ -153,8 +153,8 @@ body {
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:visited {
-  background-color: #2B78B7;
-  border-color: #2B78B7;
+  background-color: #0f62fe;
+  border-color: #0f62fe;
 }
 
 /* HEADER */
@@ -183,7 +183,7 @@ body {
 }
 
 .header-link a:hover {
-  color: #2B78B7;
+  color: #20f62fe;
   transition: 1s ease;
   text-decoration: none;
 }
@@ -482,11 +482,10 @@ body {
 }
 
 .arrow-up {
-    margin-top: -75px;
     width: 60px;
-    text-align: right;
-    align-self: right;
-    float: right;
+    text-align: center;
+    align-self: center;
+    float: center;
     position: relative;
 }
 
