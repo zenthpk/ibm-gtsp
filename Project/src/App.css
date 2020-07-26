@@ -1,0 +1,189 @@
+.page {
+    /* height: 100vh; */
+    width: 100vw;
+    position: relative;
+}
+
+.home-page {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.post{
+    width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-bottom: 5vw;
+}
+
+body {
+    color: #3e3e3e;
+    font-family: 'Work Sans', thin;
+    font-size: 83%;
+    line-height: normal;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: #0b3c8a;
+    font-family: 'Montserrat', bold;
+    font-weight: 500;
+    font-size: 2.5em;
+    margin-bottom: 5%;
+}
+
+h2 {
+    color: #0b3c8a;
+    font-family: 'Work Sans', bold;
+    font-weight: 600;
+    font-size: 3em;
+    margin-bottom: 3%;
+}
+
+h3 {
+    color: #3e3e3e;
+    font-family: 'Work Sans', bold;
+    font-weight: 900;
+    font-size: 2.1em;
+    margin-bottom: 1%;
+}
+
+h4 {
+    color: #878787;
+    font-family: 'Work Sans';
+    font-size: 1.5em;
+    margin-bottom: 3%;
+}
+
+h5 {
+    margin-bottom: 2%;
+    margin-top: 3%;
+    font-size: 1.25em;
+}
+
+/* a{
+    color: #3988e2;
+} */
+
+b{
+  font-weight: 900;
+  font-size: 96%;
+  font-family: 'Montserrat';
+}
+
+/* HOME-TOP */
+
+.top-page {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-image: url('https://i.imgur.com/NsdI7oi.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.attention-catcher {
+    font-size: 10em;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #0b3c8a;
+    min-width: 900px;
+}
+
+.attention-catcher-body{
+    font-size: 3em;
+    color: #878787;
+    min-width: 900px;
+}
+
+#home-top{
+    min-width: 900px;
+}
+
+/* HOME-ARTICLES */
+
+.spacer{
+    color: white;
+    font-size: 3em;
+}
+
+.card{
+    margin-bottom: 2.75%;
+}
+
+.read-link{
+    text-align: right;
+}
+
+/* HEADER & FOOTER */
+
+.page-footer{
+    background-color: #FFE2A4;
+}
+
+.page-footer-contact{
+  margin-top: 65px;
+  background-color: #FFE2A4;
+}
+
+/* LINK FONTS */
+
+a:link{
+    color: #878787;
+}
+
+.active-link{
+    color: #878787;
+}
+
+a:hover{
+    color: #c4820f;
+    transition: .5s ease;
+}
+
+/* ABOUT */
+
+.attention-catcher-about {
+    font-size: 5em;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #0b3c8a;
+    min-width: 900px;
+}
+
+.attention-catcher-body-about{
+    font-size: 1.5em;
+    color: #878787;
+    min-width: 900px;
+}
+
+/* NAVIGATION */
+
+.nav-bar-header {
+    text-align: right;
+    margin-top: 1.5%;
+}
+
+.nav-bar-footer {
+    text-align: center;
+}
+
+/* CONTACT FORM WARNINGS */
+
+#spacer {
+    color: #ffffff;
+}
+
+#innerhtml-1{
+    color: #C4820E;
+}
+
+#innerhtml-2{
+    color: #C4820E;
+}
+
+#innerhtml-3{
+    color: #C4820E;
+}
