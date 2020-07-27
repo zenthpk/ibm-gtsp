@@ -1,48 +1,6 @@
-/* CAROUSEL */
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-.carousel-container {
-  width: 100%;
-  margin-top: 50px;
-  /* margin: 50px auto; */
-  min-height: 200px;
-  position: relative;
-}
-@media screen and (max-width: 768px) {
-  .carousel-container {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .carousel-container {
-    width: 85%;
-  }
-}
-.carousel-container .carousel-inner {
-  overflow: hidden;
-}
-.carousel-container .track {
-  display: inline-flex;
-  transition: transform 0.5s;
-}
-.carousel-container .card-container {
-  width: 259px;
-  flex-shrink: 0;
-  height: 250px;
-  padding-right: 15px;
-  box-sizing: border-box;
-}
-.carousel-container .card-container .card {
-  width: 100%;
-  height: 100%;
-  border: none;
-  /* border: 1px solid #ccc; */
-  /* box-sizing: border-box; */
-  /* border-radius: 10px; */
-  display: flex;
-  flex-direction: column;
-  background-color: transparent;
-}
+/* CAROUSEL ALL */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 .nav button {
   width: 60px;
   height: 60px;
@@ -53,20 +11,6 @@
   transform: translateY(-50%);
   cursor: pointer;
 }
-.nav .prev {
-  left: -30px;
-  display: none;
-}
-.nav .prev.show {
-  display: block;
-}
-.nav .next {
-  right: -30px;
-}
-.nav .next.hide {
-  display: none;
-}
-
 .card > * {
   flex: 1;
 }
@@ -90,6 +34,126 @@
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+
+/* CAROUSEL 1 */
+.carousel-container1 {
+  width: 100%;
+  margin-top: 50px;
+  /* margin: 50px auto; */
+  min-height: 200px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .carousel-container1 {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .carousel-container1 {
+    width: 85%;
+  }
+}
+.carousel-container1 .carousel-inner {
+  overflow: hidden;
+}
+.carousel-container1 .track1 {
+  display: inline-flex;
+  transition: transform 0.5s;
+}
+.carousel-container1 .card-container {
+  width: 259px;
+  flex-shrink: 0;
+  height: 250px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+.carousel-container1 .card-container .card {
+  width: 100%;
+  height: 100%;
+  border: none;
+  /* border: 1px solid #ccc; */
+  /* box-sizing: border-box; */
+  /* border-radius: 10px; */
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.nav .prev1 {
+  left: -30px;
+  display: none;
+}
+.nav .prev1.show {
+  display: block;
+}
+.nav .next1 {
+  right: -30px;
+}
+.nav .next1.hide {
+  display: none;
+}
+
+/* CAROUSEL 2 */
+.carousel-container2 {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  /* margin: 50px auto; */
+  min-height: 200px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .carousel-container2 {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .carousel-container2 {
+    width: 85%;
+  }
+}
+.carousel-container2 .carousel-inner {
+  overflow: hidden;
+}
+.carousel-container2 .track2 {
+  display: inline-flex;
+  transition: transform 0.5s;
+}
+.carousel-container2 .card-container {
+  width: 259px;
+  flex-shrink: 0;
+  height: 250px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+.carousel-container2 .card-container .card {
+  width: 100%;
+  height: 100%;
+  border: none;
+  /* border: 1px solid #ccc; */
+  /* box-sizing: border-box; */
+  /* border-radius: 10px; */
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.nav .prev2 {
+  left: -30px;
+  display: none;
+}
+.nav .prev2.show {
+  display: block;
+}
+.nav .next2 {
+  right: -30px;
+}
+.nav .next2.hide {
+  display: none;
+}
+
+
+
 
 
 /* GENERAL */
