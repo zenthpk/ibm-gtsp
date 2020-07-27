@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 .carousel-container {
-  width: 1280px;
+  width: 100%;
   margin: 50px auto;
   min-height: 200px;
   position: relative;
