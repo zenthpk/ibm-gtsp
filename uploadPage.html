@@ -25,63 +25,47 @@
 <body>
 
     <!-- INTRO -->
-
     <div class="page" id="intro">
 
         <!-- HEADER -->
-        <div class="header">
+      <div class="header">
+          <a href="./index-desktop.html"><img class="header-logo" src="./media/header-logo.svg"></img></a>
+          <div class="header-link">
+              <a class="header-link" href="./index-desktop.html#programs">Profile</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              <a class="header-link" href="./about.html">Create</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              <a class="header-link" href="./index-desktop.html">Home</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          </div>
+      </div>
 
-            <a href="./index-desktop.html"><img class="header-logo" src="./media/header-logo.svg"></img></a>
+      <div class="contents">
+        <h1 class="p-hor">What content would you like to upload? </h1>
+          <form>
+            <div class="form-group">
+              <label for="videoTitle">Input Video Title</label>
 
+              <input type="title" class="form-control" id="inputVideoTitle" aria-describedby="emailHelp" placeholder="Video Title" rows=3>
 
-            <div class="header-link">
-                <a class="header-link" href="./index-desktop.html#programs">Profile</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                <a class="header-link" href="./about.html">Create</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                <a class="header-link" href="./index-desktop.html">Home</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
             </div>
+          </form>
+
+          <div class="form-group">
+            <p>Please enter your video description here </p>
+            <textarea name="Text1" cols="90" rows="10"></textarea>
+          </div>
+
+          <form action=""> <!--Insert page to redirect user to-->
+            <input type="file" id="myFile" name="filename">
+            <br><br><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+          <p> stub for selecting tags here </p> 
 
         </div>
     </div>
 
         <!-- PROGRAMS -->
 
-        <div class="contents">
-
-          <h1 class="p-hor">What content would you like to upload? </h1>
-          <div class="leftLeaning">
-            <form>
-
-              <div class="form-group">
-                <label for="videoTitle">Input Video Title</label>
-
-                <input type="title" class="form-control" id="inputVideoTitle" aria-describedby="emailHelp" placeholder="Video Title" rows=3>
-
-              </div>
-
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-
-
-
-          </div>
-
-          <div class="rightLeaning">
-            <form action=""> <!--Insert page to redirect user to-->
-              <input type="file" id="myFile" name="filename">
-              <input type="submit">
-            </form>
-
-
-          <div class="form-group">
-            <p>Please enter your video description here </p>
-            <textarea name="Text1" cols="40" rows="5"></textarea>
-
-
-          </div>
-
-          </div>
-
-        </div>
 
 
 
