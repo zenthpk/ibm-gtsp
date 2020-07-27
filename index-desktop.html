@@ -15,6 +15,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
 </head>
 
 <title>KaiwaLounge Language Exchange</title>
@@ -30,6 +33,7 @@
             
             <a href="./index-desktop.html"><img class="header-logo" src="./media/header-logo.svg"></img></a>
 
+
             <div class="header-link">
                 <a class="header-link" href="./index-desktop.html#programs">Profile</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
                 <a class="header-link" href="./about.html">Create</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
@@ -38,8 +42,163 @@
 
         </div>
 
+        <!-- In progress -->
         <div class="contents">
-              <h1 class="p-hor">Happy learning, Omar!</h1>
+
+              <h1 class="p-hor">What are we learning today, Omar?</h1>
+              </br>
+
+              <form>
+                <div class="form-row">
+                  <div class="col-2">
+                    <select class="custom-select mr-sm-2 p" id="inlineFormCustomSelect">
+                      <option selected>Select Subject</option>
+                      <option value="1">English</option>
+                      <option value="2">Math</option>
+                      <option value="3">Science</option>
+                      <option value="4">Social Studies</option>
+                      <option value="5">Art & Music</option>
+                    </select>
+                  </div>
+                  <div class="col-9">
+                    <input type="text" class="form-control p" placeholder="Enter a topic...">
+                  </div>
+                  <div class="col">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                  </div>
+                </div>
+              </form>
+              </br></br>
+
+              <h2 class="p-hor">In Progress</h2>
+          <div class="carousel-container">
+            <div class="carousel-inner">
+              <div class="track">
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img"><iframe width=244px height=200px src="https://www.youtube.com/embed/khJlrj3Y6Ls" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div class="info">
+                      Title 1
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img">2</div>
+                    <div class="info">
+                      Title 2
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img">3</div>
+                    <div class="info">
+                      Title 3
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img">1</div>
+                    <div class="info">
+                      Title 1
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img">2</div>
+                    <div class="info">
+                      Title 2
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img">3</div>
+                    <div class="info">
+                      Title 3
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img">1</div>
+                    <div class="info">
+                      Title 1
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img">2</div>
+                    <div class="info">
+                      Title 2
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img">3</div>
+                    <div class="info">
+                      Title 3
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img">1</div>
+                    <div class="info">
+                      Title 1
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img">2</div>
+                    <div class="info">
+                      Title 2
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img">3</div>
+                    <div class="info">
+                      Title 3
+                    </div>
+                  </div>
+                </div>
+                <div class="card-container">
+                  <div class="card">
+                    <div class="img">4</div>
+                    <div class="info">
+                      Title 1
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nav">
+              <button class="prev">
+                <i class="material-icons">
+                keyboard_arrow_left
+                </i>
+              </button>
+              <button class="next">
+                <i class="material-icons">
+                keyboard_arrow_right
+                </i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Saved for later -->
+        <div class="contents">
+          <h2 class="p-hor">Saved for Later</h2>
         </div>
 
     </div>
@@ -77,6 +236,12 @@
 <script src="js/email-form.js"></script>
 <script src="js/scrolling.js"></script>
 <script src="js/fadeOnLoad.js"></script>
+<script src="js/carousel.js"></script>
+
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
 
 </body>
 
