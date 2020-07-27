@@ -3,7 +3,8 @@
 
 .carousel-container {
   width: 100%;
-  margin: 50px auto;
+  margin-top: 50px;
+  /* margin: 50px auto; */
   min-height: 200px;
   position: relative;
 }
@@ -34,11 +35,13 @@
 .carousel-container .card-container .card {
   width: 100%;
   height: 100%;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  border-radius: 10px;
+  border: none;
+  /* border: 1px solid #ccc; */
+  /* box-sizing: border-box; */
+  /* border-radius: 10px; */
   display: flex;
   flex-direction: column;
+  background-color: transparent;
 }
 .nav button {
   width: 60px;
@@ -71,15 +74,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  text-align: center;
+  font-size: 100%;
+  background-color: #d0e2ff;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .card .info {
   flex-basis: 40px;
-  background: #333;
+  background: #c1c7cd;
   color: #fff;
   flex-grow: 0;
   padding: 10px;
   box-sizing: border-box;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 
