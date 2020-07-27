@@ -19,7 +19,7 @@ h1 {
 
 h2 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 4vh;
   color: #0f62fe;
   text-align: left;
@@ -44,17 +44,18 @@ h3 {
   letter-spacing: 1px;
 }
 
-.form-control {
-  width: 80%;
-  height: 2vw;
-  font-size: 1.5vw;
+.form-control, .custom-select {
+  /* width: 80%; */
+  /* height: 2vw; */
+  /* font-size: 1.5vw; */
+  font-weight: 100;
 }
 
-.text-area-submit {
+/* .text-area-submit {
   font-size: 2.25vh;
   height: 2vw;
   width: 80%;
-}
+} */
 
 .page-hor-friendly {
   height: 100vh;
@@ -149,13 +150,13 @@ body {
   margin-right: auto;
 }
 
-.btn-primary,
+/* .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:visited {
   background-color: #0f62fe;
   border-color: #0f62fe;
-}
+} */
 
 /* HEADER */
 
@@ -183,12 +184,12 @@ body {
 }
 
 .header-link a:hover {
-  color: #20f62fe;
+  color: #0f62fe;
   transition: 1s ease;
   text-decoration: none;
 }
 
-.dropbtn {
+/* .dropbtn {
   margin-top: 1em;
   padding-top: 5px;
   cursor: pointer;
@@ -231,14 +232,14 @@ body {
   text-decoration: none;
   display: block;
   border-top: 1px solid rgba(20, 157, 148, 0.14);
-}
+} */
 
-.dropdown a:hover {
+/* .dropdown a:hover {
   background-color: #ddd;
-  position: fixed;
+  position: fixed; */
   /* display: inline-block;
     float: right; */
-}
+/* } */
 
 .show {
   display: block;
@@ -319,7 +320,7 @@ body {
   width: 60%;
 }
 
-.btn-primary-ml,
+/* .btn-primary-ml,
 .btn-primary-ml:hover,
 .btn-primary-ml:active,
 .btn-primary-ml:visited {
@@ -328,11 +329,11 @@ body {
   font-weight: 600 !important;
   box-shadow: 0px 0px 5px 0px #82CAC6;
   animation-duration: 10s;
-  animation-delay: 3s;
+  animation-delay: 3s; */
   /* #1A77B9 FF3559 B61747*/
-}
+/* } */
 
-.subscribe-button {
+/* .subscribe-button {
   background-color: #82CAC6 !important;
   font-weight: 600 !important;
   color: white;
@@ -340,8 +341,8 @@ body {
   padding-left: 5%;
   padding-right: 5%;
   /* font-family: 'Noto Sans', 'sans-serif'; */
-  border: none;
-}
+  /* border: none; */
+/* } */
 
 /* .intro-img {
   height: auto;
