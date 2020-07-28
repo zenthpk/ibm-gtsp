@@ -39,15 +39,126 @@
     </div>
 
     <div class="contents">
-      <p class="filler"></p>
-      <br/><br/>
-      <h2 class="p-hor">KaiwaLounge is on a mission to help people build <b>mutual understanding</b>.</h2>
-      <p class="p-hor">Language brings people together, connecting across race, ethnicity, country, and culture. We believe that by facilitating language exchange, we can help people around the world unite in their humanity.</p> 
-      </br><br/>
-      <p class="filler"></p>
-      <div class="arrow-up">
-        <a href="./about.html#mission"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
+      
+      <div>
+        <button onclick="genSuggested()">Add onclick to Upload</button>
       </div>
+      
+      <div>
+
+        <div class="input-group input-group-lg">
+          <input type="text" class="form-control" id="textbox" placeholder="Ex: Algebra" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+          <input type="submit" id="btnAdd" onclick="add()" class="btn btn-success">
+        </div>        
+      
+        </br></br>
+        <p id="tagList">Tags:</p>
+      
+        <script>
+          var possibleTags = ["Algebra", "Stoichiometry", "Pythagorean", "Being Dumb", "Euclidean Geometry", "Counting", "Reading", "Literary Analysis", "Magnetism", "Feeding a Cat", "Writing"];
+          var currentTags = [];
+          var suggestedTags = [];
+
+          function add() {
+            var newTag = document.createElement("button");
+            var newVal = document.getElementById("textbox").value;
+            newTag.id = newVal;
+            newTag.textContent = newVal;
+            newTag.className = "btn btn-warning";
+            newTag.onclick = function () { remove(newTag) };
+
+            var tags = document.getElementById("tagList");
+            if (possibleTags.includes(newVal)) {
+              if (!currentTags.includes(newVal)) {
+                currentTags.push(newVal);
+                tags.appendChild(newTag);
+              }
+            }
+            genSuggested();
+          }
+
+          function remove(old_tag) {
+            var tags = document.getElementById("tagList");
+            tags.removeChild(old_tag);
+            var newTags = [];
+            var i;
+            for (i = 0; i < currentTags.length; i++) {
+              if (currentTags[i] != old_tag.id) {
+                newTags.push(currentTags[i]);
+              }
+            }
+            currentTags = newTags;
+            genSuggested();
+          }
+
+          function genSuggested() {
+            var tags = document.getElementById("suggestedList");
+            var h;
+            for (h = 0; h < Math.min(5, suggestedTags.length); h++) {
+              var sugg = document.getElementById(suggestedTags[h] + "_sug");
+              tags.removeChild(sugg);
+            }
+            suggestedTags = [];
+            var i;
+            for (i = 0; i < possibleTags.length; i++) {
+              if (!currentTags.includes(possibleTags[i])) {
+                suggestedTags.push(possibleTags[i]);
+              }
+            }
+            tagAlg(document.getElementById("transcript"));
+            var j;
+            for (j = 0; j < Math.min(5, suggestedTags.length); j++) {
+              addSuggest(suggestedTags[j]);
+            }
+          }
+
+          function tagAlg(transcript) {
+            shuffle(suggestedTags)
+          }
+
+          function addSuggest(newVal) {
+            var newTag = document.createElement("button");
+            newTag.id = newVal + "_sug";
+            newTag.textContent = newVal;
+            newTag.className = "btn btn-outline-warning";
+            newTag.onclick = function () { addFromTag(newVal) };
+
+            var tags = document.getElementById("suggestedList");
+            tags.appendChild(newTag);
+          }
+
+          function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+              let j = Math.floor(Math.random() * (i + 1));
+              [array[i], array[j]] = [array[j], array[i]];
+            }
+          }
+
+          function addFromTag(newVal) {
+            var newTag = document.createElement("button");
+            newTag.id = newVal;
+            newTag.textContent = newVal;
+            newTag.className = "btn btn-warning";
+            newTag.onclick = function () { remove(newTag) };
+
+            var tags = document.getElementById("tagList");
+            if (possibleTags.includes(newVal)) {
+              if (!currentTags.includes(newVal)) {
+                currentTags.push(newVal);
+                tags.appendChild(newTag);
+              }
+            }
+            genSuggested();
+          }
+
+        </script>
+      
+        <p id="suggestedList">Suggested Tags:</p>
+      
+        <p id="transcript"></p>
+      
+      </div>
+      
     </div>
 
   </div>
