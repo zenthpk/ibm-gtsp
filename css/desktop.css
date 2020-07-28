@@ -166,6 +166,22 @@ p {
   letter-spacing: 0.75px;
 }
 
+#name {
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+#rating {
+  font-size: 150%;
+  color: #0f62fe;
+  margin-top: -10px;
+}
+
+#text {
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
 h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -217,7 +233,7 @@ h3 {
 } */
 
 .page-hor-friendly {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   position: relative;
   display: flex;
@@ -319,6 +335,18 @@ body {
 } */
 
 /* HEADER */
+
+.head {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vh;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  display: inline-block;
+  /* overflow: hidden; */
+}
 
 .header {
   position: relative;
@@ -628,10 +656,10 @@ body {
   padding-right: 2.5%;
 }
 
-.col-3 {
+/* .col-3 {
   padding-left: 2.5%;
   padding-right: 2.5%;
-}
+} */
 
 .col-4 {
   padding-left: 0.1%;
