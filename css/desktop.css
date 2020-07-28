@@ -312,7 +312,7 @@ body {
     .intro-img {
         width: 30vw;
     }
-} 
+}
 
 .filler {
   flex: 1;
@@ -361,6 +361,13 @@ body {
   height: 30px;
   width: auto;
   float: left;
+  text-align: left;
+
+}
+
+.header-searchBar {
+  text-align: center justify !important;
+  width: 50%;
 }
 
 .header-link {
