@@ -1,3 +1,161 @@
+
+/* CAROUSEL ALL */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.nav button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.card > * {
+  flex: 1;
+}
+.card .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 100%;
+  background-color: #d0e2ff;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.card .info {
+  flex-basis: 40px;
+  background: #c1c7cd;
+  color: #fff;
+  flex-grow: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* CAROUSEL 1 */
+.carousel-container1 {
+  width: 100%;
+  /* margin-top: 500px;
+  margin: 50px auto; */
+  min-height: 200px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .carousel-container1 {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .carousel-container1 {
+    width: 85%;
+  }
+}
+.carousel-container1 .carousel-inner {
+  overflow: hidden;
+}
+.carousel-container1 .track1 {
+  display: inline-flex;
+  transition: transform 0.5s;
+}
+.carousel-container1 .card-container {
+  width: 259px;
+  flex-shrink: 0;
+  height: 250px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+.carousel-container1 .card-container .card {
+  width: 100%;
+  height: 100%;
+  border: none;
+  /* border: 1px solid #ccc; */
+  /* box-sizing: border-box; */
+  /* border-radius: 10px; */
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.nav .prev1 {
+  left: -30px;
+  display: none;
+}
+.nav .prev1.show {
+  display: block;
+}
+.nav .next1 {
+  right: -30px;
+}
+.nav .next1.hide {
+  display: none;
+}
+
+/* CAROUSEL 2 */
+.carousel-container2 {
+  /* width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px; */
+  /* margin: 50px auto; */
+  min-height: 200px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .carousel-container2 {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .carousel-container2 {
+    width: 85%;
+  }
+}
+.carousel-container2 .carousel-inner {
+  overflow: hidden;
+}
+.carousel-container2 .track2 {
+  display: inline-flex;
+  transition: transform 0.5s;
+}
+.carousel-container2 .card-container {
+  width: 259px;
+  flex-shrink: 0;
+  height: 250px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+.carousel-container2 .card-container .card {
+  width: 100%;
+  height: 100%;
+  border: none;
+  /* border: 1px solid #ccc; */
+  /* box-sizing: border-box; */
+  /* border-radius: 10px; */
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.nav .prev2 {
+  left: -30px;
+  display: none;
+}
+.nav .prev2.show {
+  display: block;
+}
+.nav .next2 {
+  right: -30px;
+}
+.nav .next2.hide {
+  display: none;
+}
+
+
+
+
+
 /* GENERAL */
 
 p {
@@ -8,6 +166,22 @@ p {
   letter-spacing: 0.75px;
 }
 
+#name {
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+#rating {
+  font-size: 150%;
+  color: #0f62fe;
+  margin-top: -10px;
+}
+
+#text {
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
 h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -15,6 +189,7 @@ h1 {
   color: #0f62fe;
   text-align: left;
   letter-spacing: 1px;
+  margin-bottom: 0.5em;
 }
 
 h2 {
@@ -58,7 +233,7 @@ h3 {
 } */
 
 .page-hor-friendly {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   position: relative;
   display: flex;
@@ -77,12 +252,13 @@ body {
 }
 
 .page {
-  height: 100vh;
+  /* height: 100vh; */
   /* min-height: 100vh; */
   width: 100vw;
   position: relative;
   display: flex;
   flex-direction: column;
+
 }
 
 .page-no-limit {
@@ -99,7 +275,7 @@ body {
   padding-top: 7.5vh;
   margin-left: 7.5vw;
   margin-right: 7.5vw;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .intro-img {
@@ -159,6 +335,18 @@ body {
 } */
 
 /* HEADER */
+
+.head {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vh;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  display: inline-block;
+  /* overflow: hidden; */
+}
 
 .header {
   position: relative;
@@ -475,10 +663,10 @@ body {
   padding-right: 2.5%;
 }
 
-.col-3 {
+/* .col-3 {
   padding-left: 2.5%;
   padding-right: 2.5%;
-}
+} */
 
 .col-4 {
   padding-left: 0.1%;

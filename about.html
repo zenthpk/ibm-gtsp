@@ -11,37 +11,109 @@
   <link rel="icon" type="image/png" href="./media/logo.png">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/desktop.css">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;600&family=Nunito+Sans:wght@200;300;600&family=Quicksand:wght@300;600&family=Roboto:wght@100;700&family=Work+Sans:wght@200;300;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap" rel="stylesheet">
-
+  
 </head>
 
-<title>KaiwaLounge Language Exchange</title>
+<title>IBM Global Classrooms</title>
 
 <body>
   
   <!-- INTRO -->
 
   <div class="page" style="height: auto; min-height: 100vh;" id="mission">
+
+  <div class="head row">
     
-    <!-- HEADER -->
-    <div class="header">
-          
-      <a href="./index-desktop.html"><img class="header-logo" src="./media/header-logo.svg"></img></a>
-          
-      <div class="header-link">
+    <div class="col-3" style="float: left;">
+    <a href="./index-desktop.html"><img class="header-logo" src="./media/header-logo.svg"></img></a>
+    </div>
+
+    <div class="col-6" style="float: left; width: 170vw;">
+      <form>
+        <div class="form-row col-12">
+          <div class="col-3">
+            <select class="custom-select mr-sm-2 p" id="inlineFormCustomSelect">
+              <option selected>Subject</option>
+              <option value="1">English</option>
+              <option value="2">Math</option>
+              <option value="3">Science</option>
+              <option value="4">Social Studies</option>
+              <option value="5">Art & Music</option>
+            </select>
+          </div>
+          <div class="col-7">
+            <input type="text" class="form-control p" placeholder="Enter a topic...">
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="header-link col-3" style="float: left;">
         <a class="header-link" href="./index-desktop.html#programs">Profile</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
         <a class="header-link" href="./about.html">Create</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
         <a class="header-link" href="./index-desktop.html">Home</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
     </div>
-  
-    </div>
+
+</div>
 
     <div class="contents">
       
       <div>
         <button onclick="genSuggested()">Add onclick to Upload</button>
+
+      <!-- COMMENTS SECTION -->
+      <h2>Leave us a comment!</h2></br>
+
+      <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+      <script src="js/firebaseMessage.js"></script>
+      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script>
+        function load()  {
+            updateDisplay();
+  
+        }
+        window.onload = load;
+      </script>
+
+      <div class="form-row">
+        <div class="col-6"> 
+        <p>Name</p>
+        <select type="text" class="form-control p" id='messageNameField' value='' name="enterName">
+          <option value="Omar Elbarmawi">Omar Elbarmawi</option>
+          <option value="Anonymous">Anonymous</option>
+        </select><br/>
+        </div>
+        <div class="col-6">  
+        <p>Rating</p>
+        <select type="text" class="custom-select p" id='messageRatingField' style="text-align: left; color: #0f62fe;" value='' name="enterText">
+          <option value="★☆☆☆☆">★☆☆☆☆</option>
+          <option value="★★☆☆☆">★★☆☆☆</option>
+          <option value="★★★☆☆">★★★☆☆</option>
+          <option value="★★★★☆">★★★★☆</option>
+          <option selected value="★★★★★">★★★★★</option>
+        </select><br/>
+        </div>
+        <div class="col-12">
+        <p>Message</p>
+        <textarea type="text" class="form-control p" id='messageTextField' style="height: 100px; text-align: left;" value='' name="enterText"></textarea><br/> 
+        </div>
+      </div>
+      </br>  
+      <button type="submit" class="btn btn-primary" onClick="writeFunction()">Share</button>
+      <br/><br/><br/><br/>
+
+    <h3><p>Comments</h3>
+    <div id="messageList">
+    </div>
+    <br/>
+    
+    <div class="arrow-up">
+        <a href="./about.html#mission"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
+
       </div>
       
       <div>
@@ -160,10 +232,10 @@
       </div>
       
     </div>
+  </br></br>
 
-  </div>
-      </br></br>
-</div>
+  <!-- </div>
+</div> -->
 
   <!-- FOOTER -->
 
