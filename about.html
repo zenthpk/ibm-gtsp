@@ -11,37 +11,273 @@
   <link rel="icon" type="image/png" href="./media/logo.png">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/desktop.css">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;600&family=Nunito+Sans:wght@200;300;600&family=Quicksand:wght@300;600&family=Roboto:wght@100;700&family=Work+Sans:wght@200;300;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap" rel="stylesheet">
-
+  
 </head>
 
-<title>KaiwaLounge Language Exchange</title>
+<title>IBM Global Classrooms</title>
 
 <body>
   
   <!-- INTRO -->
 
   <div class="page" style="height: auto; min-height: 100vh;" id="mission">
+
+  <div class="head row">
     
-    <!-- HEADER -->
-    <div class="header">
-          
-      <a href="./index-desktop.html"><img class="header-logo" src="./media/header-logo.svg"></img></a>
-          
-      <div class="header-link">
+    <div class="col-3" style="float: left;">
+    <a href="./index-desktop.html"><img class="header-logo" src="./media/header-logo.svg"></img></a>
+    </div>
+
+    <div class="col-6" style="float: left; width: 170vw;">
+      <form>
+        <div class="form-row col-12">
+          <div class="col-3">
+            <select class="custom-select mr-sm-2 p" id="inlineFormCustomSelect">
+              <option selected>Subject</option>
+              <option value="1">English</option>
+              <option value="2">Math</option>
+              <option value="3">Science</option>
+              <option value="4">Social Studies</option>
+              <option value="5">Art & Music</option>
+            </select>
+          </div>
+          <div class="col-7">
+            <input type="text" class="form-control p" placeholder="Enter a topic...">
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="header-link col-3" style="float: left;">
         <a class="header-link" href="./index-desktop.html#programs">Profile</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
         <a class="header-link" href="./about.html">Create</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
         <a class="header-link" href="./index-desktop.html">Home</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
     </div>
-  
+
+</div>
+
+<div class="contents">
+  <h1 class="p-hor">What content would you like to upload? </h1>
+    <form>
+      <div class="form-group">
+        <label for="videoTitle">Input Video Title</label>
+
+        <input type="title" class="form-control" id="inputVideoTitle" aria-describedby="emailHelp" placeholder="Video Title" rows=3>
+
+      </div>
+    </form>
+
+
+    <p>Your current video that you are about to upload</p>
+
+    <iframe id="videoIFrame" src="cathoSampleVideo.mp4" title="Iframe Example"></iframe>
+
+    <style>
+      #videoIFrame {
+        max-width: 60%;
+        max-height: 60%;
+      }
+    </style>
+
+    <p> Note to reader: there is stuff supposed to be right aligned but i got lazy</p> 
+
+    <div class="form-group">
+      <p>Please enter your video description here </p>
+      <textarea name="Text1" cols="90" rows="10"></textarea>
     </div>
+
+    <!--A little bit of js to make the video proportional to the size of the screen  <-->
+
+    <form action=""> <!--Insert page to redirect user to-->
+      <input type="file" id="myFile" name="filename">
+      <br><br><br>
+      <button type="submit" class="btn btn-primary" onclick="genSuggested()">Submit</button>
+    </form>     
+
+    </br></br>
+  </h1>
+</div>
+</div>
+
+<div class="page" id="additional">
+  
+<div  class="contents">
+  <div class="input-group input-group-lg">
+    <input type="text" class="form-control" id="textbox" placeholder="Ex: Algebra" aria-label="Large"
+      aria-describedby="inputGroup-sizing-sm">
+    <input type="submit" id="btnAdd" onclick="add()" class="btn btn-success">
+  </div>
+
+  </br></br>
+
+  <p id="tagList">Tags:</p>
+
+  <script>
+    var possibleTags = ["Algebra", "Stoichiometry", "Pythagorean", "Being Dumb", "Euclidean Geometry", "Counting", "Reading", "Literary Analysis", "Magnetism", "Feeding a Cat", "Writing"];
+    var currentTags = [];
+    var suggestedTags = [];
+
+    function add() {
+      var newTag = document.createElement("button");
+      var newVal = document.getElementById("textbox").value;
+      newTag.id = newVal;
+      newTag.textContent = newVal;
+      newTag.className = "btn btn-warning";
+      newTag.onclick = function () { remove(newTag) };
+
+      var tags = document.getElementById("tagList");
+      if (possibleTags.includes(newVal)) {
+        if (!currentTags.includes(newVal)) {
+          currentTags.push(newVal);
+          tags.appendChild(newTag);
+        }
+      }
+      genSuggested();
+    }
+
+    function remove(old_tag) {
+      var tags = document.getElementById("tagList");
+      tags.removeChild(old_tag);
+      var newTags = [];
+      var i;
+      for (i = 0; i < currentTags.length; i++) {
+        if (currentTags[i] != old_tag.id) {
+          newTags.push(currentTags[i]);
+        }
+      }
+      currentTags = newTags;
+      genSuggested();
+    }
+
+    function genSuggested() {
+      var tags = document.getElementById("suggestedList");
+      var h;
+      for (h = 0; h < Math.min(5, suggestedTags.length); h++) {
+        var sugg = document.getElementById(suggestedTags[h] + "_sug");
+        tags.removeChild(sugg);
+      }
+      suggestedTags = [];
+      var i;
+      for (i = 0; i < possibleTags.length; i++) {
+        if (!currentTags.includes(possibleTags[i])) {
+          suggestedTags.push(possibleTags[i]);
+        }
+      }
+      tagAlg(document.getElementById("transcript"));
+      var j;
+      for (j = 0; j < Math.min(5, suggestedTags.length); j++) {
+        addSuggest(suggestedTags[j]);
+      }
+    }
+
+    function tagAlg(transcript) {
+      shuffle(suggestedTags)
+    }
+
+    function addSuggest(newVal) {
+      var newTag = document.createElement("button");
+      newTag.id = newVal + "_sug";
+      newTag.textContent = newVal;
+      newTag.className = "btn btn-outline-warning";
+      newTag.onclick = function () { addFromTag(newVal) };
+
+      var tags = document.getElementById("suggestedList");
+      tags.appendChild(newTag);
+    }
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function addFromTag(newVal) {
+      var newTag = document.createElement("button");
+      newTag.id = newVal;
+      newTag.textContent = newVal;
+      newTag.className = "btn btn-warning";
+      newTag.onclick = function () { remove(newTag) };
+
+      var tags = document.getElementById("tagList");
+      if (possibleTags.includes(newVal)) {
+        if (!currentTags.includes(newVal)) {
+          currentTags.push(newVal);
+          tags.appendChild(newTag);
+        }
+      }
+      genSuggested();
+    }
+
+  </script>
+
+  <p id="suggestedList">Suggested Tags:</p>
+
+  <p id="transcript"></p>
+
+</div>
+</div>
 
     <div class="contents">
       
       <div>
         <button onclick="genSuggested()">Add onclick to Upload</button>
+
+      <!-- COMMENTS SECTION -->
+      <h2>Leave us a comment!</h2></br>
+
+      <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+      <script src="js/firebaseMessage.js"></script>
+      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+      <script>
+        function load()  {
+            updateDisplay();
+  
+        }
+        window.onload = load;
+      </script>
+
+      <div class="form-row">
+        <div class="col-6"> 
+        <p>Name</p>
+        <select type="text" class="form-control p" id='messageNameField' value='' name="enterName">
+          <option value="Omar Elbarmawi">Omar Elbarmawi</option>
+          <option value="Anonymous">Anonymous</option>
+        </select><br/>
+        </div>
+        <div class="col-6">  
+        <p>Rating</p>
+        <select type="text" class="custom-select p" id='messageRatingField' style="text-align: left; color: #0f62fe;" value='' name="enterText">
+          <option value="★☆☆☆☆">★☆☆☆☆</option>
+          <option value="★★☆☆☆">★★☆☆☆</option>
+          <option value="★★★☆☆">★★★☆☆</option>
+          <option value="★★★★☆">★★★★☆</option>
+          <option selected value="★★★★★">★★★★★</option>
+        </select><br/>
+        </div>
+        <div class="col-12">
+        <p>Message</p>
+        <textarea type="text" class="form-control p" id='messageTextField' style="height: 100px; text-align: left;" value='' name="enterText"></textarea><br/> 
+        </div>
+      </div>
+      </br>  
+      <button type="submit" class="btn btn-primary" onClick="writeFunction()">Share</button>
+      <br/><br/><br/><br/>
+
+    <h3><p>Comments</h3>
+    <div id="messageList">
+    </div>
+    <br/>
+    
+    <div class="arrow-up">
+        <a href="./about.html#mission"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
+
       </div>
       
       <div>
@@ -160,10 +396,10 @@
       </div>
       
     </div>
+  </br></br>
 
-  </div>
-      </br></br>
-</div>
+  <!-- </div>
+</div> -->
 
   <!-- FOOTER -->
 

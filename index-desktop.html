@@ -11,46 +11,45 @@
   <link rel="icon" type="image/png" href="./media/logo.png">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/desktop.css">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;600&family=Nunito+Sans:wght@200;300;600&family=Quicksand:wght@300;600&family=Roboto:wght@100;700&family=Work+Sans:wght@200;300;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
 </head>
 
-<title>KaiwaLounge Language Exchange</title>
+<title>IBM Global Classrooms</title>
 
 <body>
 
     <!-- INTRO -->
 
     <div class="page" id="intro">
-
         <!-- HEADER -->
-        <div class="header">
-            
-            <a href="./index-desktop.html"><img class="header-logo" src="./media/header-logo.svg"></img></a>
+        <div class="head row">
+    
+          <div class="col-3" style="float: left;">
+          <a href="./index-desktop.html"><img class="header-logo" src="./media/header-logo.svg"></img></a>
+          </div>
+      
+          <div class="header-link col-3" style="float: right;">
+              <a class="header-link" href="./index-desktop.html#programs">Profile</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              <a class="header-link" href="./about.html">Create</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              <a class="header-link" href="./index-desktop.html">Home</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          </div>
+      
+      </div>
 
-
-            <div class="header-link">
-                <a class="header-link" href="./index-desktop.html#programs">Profile</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                <a class="header-link" href="./about.html">Create</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                <a class="header-link" href="./index-desktop.html">Home</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            </div>
-
-        </div>
-
+        <!-- In progress -->
         <div class="contents">
+
               <h1 class="p-hor">What are we learning today, Omar?</h1>
-              </br>
 
               <form>
                 <div class="form-row">
                   <div class="col-2">
                     <select class="custom-select mr-sm-2 p" id="inlineFormCustomSelect">
-                      <option selected>Select Subject</option>
+                      <option selected>Subject</option>
                       <option value="1">English</option>
                       <option value="2">Math</option>
                       <option value="3">Science</option>
@@ -69,11 +68,136 @@
               </br></br>
 
               <h2 class="p-hor">In Progress</h2>
-              </br></br>
+              <!-- Carousel Container 1 -->
+              <div class="carousel-container1">
+                <div class="carousel-inner">
+                  <div class="track1">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">IP Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">IP Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="nav">
+                  <button class="prev1">
+                    <i class="material-icons">
+                    keyboard_arrow_left
+                    </i>
+                  </button>
+                  <button class="next1">
+                    <i class="material-icons">
+                    keyboard_arrow_right
+                    </i>
+                  </button>
+                </div>
+              </div>
 
-              <h2 class="p-hor">Saved for Later</h2>
-              </br>
-              
+        </div>
+
+        <!-- Saved for later -->
+        <div class="contents">
+          <h2 class="p-hor">Saved for Later</h2>
+
+            <!-- tabby things -->
+            <p>
+              <button class="btn btn-primary" type="button" onclick="allSFLDisplay()">All</button>
+              <button class="btn btn-primary" type="button" onclick="videoDisplay()">Videos</button>
+              <button class="btn btn-primary" type="button" onclick="channelDisplay()">Channels</button>
+              <button class="btn btn-primary" type="button" onclick="courseDisplay()">Courses</button>
+            </p>
+
+            <div id="collapseVideos">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">SFL Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">SFL Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="collapseChannels">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">SFL Channel 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">SFL Channel 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="collapseCourses">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">SFL Course 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">SFL Course 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Container Videos Saved For Later -->
         </div>
 
     </div>
@@ -84,15 +208,147 @@
 
         <div class="contents">
             <h1>Explore</h1>
-            </br></br>
-            <p><b>FILLER CONTENT </b> While studying abroad, Tim had the opportunity to participate in conversation exchange tables where he could practice speaking Japanese with native Japanese students and community members. Upon returning to the United States, he decided to start KaiwaLounge, a language exchange program modeled after his experience abroad. Thinking that in-person programs were rather inconvenient, he decided to make KaiwaLounge an online program. Two weeks later, COVID-19 shut down all in-person classes and in-person language exchange programs. Coincidence?</p>
-            <p>In the early days, Tim matched people learning Japanese with people learning English one-by-one on a Google Spreadsheet. Now, with the help of an amazing all-remote team, KaiwaLounge has upgraded many of its processes. We still match people on spreadsheets though - some things never change.</p>
-            <p>Today, Kaiwalounge has grown to over 70 participants from institutions around the world, including the University of California, Middlebury College, International Christian University, and Hosei University. Although we're growing at a rapid pace, our priority is always to provide the best experience possible for our participants.</p>
-            <p>While studying abroad, Tim had the opportunity to participate in conversation exchange tables where he could practice speaking Japanese with native Japanese students and community members. Upon returning to the United States, he decided to start KaiwaLounge, a language exchange program modeled after his experience abroad. Thinking that in-person programs were rather inconvenient, he decided to make KaiwaLounge an online program. Two weeks later, COVID-19 shut down all in-person classes and in-person language exchange programs. Coincidence?</p>
-            <p>In the early days, Tim matched people learning Japanese with people learning English one-by-one on a Google Spreadsheet. Now, with the help of an amazing all-remote team, KaiwaLounge has upgraded many of its processes. We still match people on spreadsheets though - some things never change.</p>
-            <p>Today, Kaiwalounge has grown to over 70 participants from institutions around the world, including the University of California, Middlebury College, International Christian University, and Hosei University. Although we're growing at a rapid pace, our priority is always to provide the best experience possible for our participants.</p>
-            <p>While studying abroad, Tim had the opportunity to participate in conversation exchange tables where he could practice speaking Japanese with native Japanese students and community members. Upon returning to the United States, he decided to start KaiwaLounge, a language exchange program modeled after his experience abroad. Thinking that in-person programs were rather inconvenient, he decided to make KaiwaLounge an online program. Two weeks later, COVID-19 shut down all in-person classes and in-person language exchange programs. Coincidence?</p>  
-            </br></br>
+            <!-- tabby things -->
+            <p>
+              <button class="btn btn-primary" type="button" onclick="allExploreDisplay()">All</button>
+              <button class="btn btn-primary" type="button" onclick="englishDisplay()">English</button>
+              <button class="btn btn-primary" type="button" onclick="mathDisplay()">Math</button>
+              <button class="btn btn-primary" type="button" onclick="scienceDisplay()">Science</button>
+              <button class="btn btn-primary" type="button" onclick="socialstudiesDisplay()">Social Studies</button>
+              <button class="btn btn-primary" type="button" onclick="artmusicDisplay()">Art & Music</button>
+            </p>
+
+            <div id="collapseEnglish">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">English Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">English Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="collapseMath">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Math Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Math Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="collapseScience">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Science Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Science Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="collapseSocialStudies">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Social Studies Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Social Studies Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="collapseArtMusic">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Art Music Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Art Music Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
             <div class="arrow-up">
             <a href="./index-desktop.html#intro"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
             <div>
@@ -105,12 +361,141 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script>
+  $(function(){
+      $('#carousel').load('carousel.html');
+  });
+</script>
+
+
+<script>
+  function allSFLDisplay() {
+    var videos = document.getElementById('collapseVideos');
+    var channels = document.getElementById('collapseChannels');
+    var courses = document.getElementById('collapseCourses');
+    videos.style.display = 'block';
+    channels.style.display = 'block';
+    courses.style.display = 'block';
+  }
+
+  function videoDisplay() {
+    var videos = document.getElementById('collapseVideos');
+    var channels = document.getElementById('collapseChannels');
+    var courses = document.getElementById('collapseCourses');
+    videos.style.display = 'block';
+    channels.style.display = 'none';
+    courses.style.display = 'none';
+  }
+
+  function channelDisplay() {
+    var videos = document.getElementById('collapseVideos');
+    var channels = document.getElementById('collapseChannels');
+    var courses = document.getElementById('collapseCourses');
+    videos.style.display = 'none';
+    channels.style.display = 'block';
+    courses.style.display = 'none';
+  }
+
+  function courseDisplay() {
+    var videos = document.getElementById('collapseVideos');
+    var channels = document.getElementById('collapseChannels');
+    var courses = document.getElementById('collapseCourses');
+    videos.style.display = 'none';
+    channels.style.display = 'none';
+    courses.style.display = 'block';
+  }
+</script>
+
+<script>
+  function allExploreDisplay() {
+    var english = document.getElementById('collapseEnglish');
+    var math = document.getElementById('collapseMath');
+    var science = document.getElementById('collapseScience');
+    var socialstudies = document.getElementById('collapseSocialStudies');
+    var artmusic = document.getElementById('collapseArtMusic');
+    english.style.display = 'block';
+    math.style.display = 'block';
+    science.style.display = 'block';
+    socialstudies.style.display = 'block';
+    artmusic.style.display = 'block';
+  }
+
+  function englishDisplay() {
+    var english = document.getElementById('collapseEnglish');
+    var math = document.getElementById('collapseMath');
+    var science = document.getElementById('collapseScience');
+    var socialstudies = document.getElementById('collapseSocialStudies');
+    var artmusic = document.getElementById('collapseArtMusic');
+    english.style.display = 'block';
+    math.style.display = 'none';
+    science.style.display = 'none';
+    socialstudies.style.display = 'none';
+    artmusic.style.display = 'none';
+  }
+
+  function mathDisplay() {
+    var english = document.getElementById('collapseEnglish');
+    var math = document.getElementById('collapseMath');
+    var science = document.getElementById('collapseScience');
+    var socialstudies = document.getElementById('collapseSocialStudies');
+    var artmusic = document.getElementById('collapseArtMusic');
+    english.style.display = 'none';
+    math.style.display = 'block';
+    science.style.display = 'none';
+    socialstudies.style.display = 'none';
+    artmusic.style.display = 'none';
+  }
+
+  function scienceDisplay() {
+    var english = document.getElementById('collapseEnglish');
+    var math = document.getElementById('collapseMath');
+    var science = document.getElementById('collapseScience');
+    var socialstudies = document.getElementById('collapseSocialStudies');
+    var artmusic = document.getElementById('collapseArtMusic');
+    english.style.display = 'none';
+    math.style.display = 'none';
+    science.style.display = 'block';
+    socialstudies.style.display = 'none';
+    artmusic.style.display = 'none';
+  }
+
+  function socialstudiesDisplay() {
+    var english = document.getElementById('collapseEnglish');
+    var math = document.getElementById('collapseMath');
+    var science = document.getElementById('collapseScience');
+    var socialstudies = document.getElementById('collapseSocialStudies');
+    var artmusic = document.getElementById('collapseArtMusic');
+    english.style.display = 'none';
+    math.style.display = 'none';
+    science.style.display = 'none';
+    socialstudies.style.display = 'block';
+    artmusic.style.display = 'none';
+  }
+
+  function artmusicDisplay() {
+    var english = document.getElementById('collapseEnglish');
+    var math = document.getElementById('collapseMath');
+    var science = document.getElementById('collapseScience');
+    var socialstudies = document.getElementById('collapseSocialStudies');
+    var artmusic = document.getElementById('collapseArtMusic');
+    english.style.display = 'none';
+    math.style.display = 'none';
+    science.style.display = 'none';
+    socialstudies.style.display = 'none';
+    artmusic.style.display = 'block';
+  }
+
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/dropdown.js"></script>
 <script src="js/email-form.js"></script>
 <script src="js/scrolling.js"></script>
 <script src="js/fadeOnLoad.js"></script>
+<script src="js/carousel1.js"></script>
+<script src="js/carousel2.js"></script>
 
 <!-- JQuery -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
