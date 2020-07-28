@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+
+  <form>
+    <input type="file" id="localVideo" name="filename">
+    <button type="button" onclick=viewVideo()>Submit</button>
+  </form>
+
+<!-- src is some url to the internet
+srcdoc is probably where we can load local videos
+although I THINK that we need to have it as a variable without "" -->
+  <video width="320" height="240" id="innerVideo" controls >
+    <source src="" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    function viewVideo() {
+      document.getElementById("innerVideo").src = document.getElementById("localVideo").files[0].name;
+    }
+
+
+  </script>
+
+<!--
+  <script type="text/javascript">
+
+      $(document).ready(function () {
+
+          $("#formsubmit").click(function () {
+
+              var iframe = $('<iframe name="postiframe" id="postiframe" style="display: none"></iframe>');
+
+              $("body").append(iframe);
+
+              var form = $('#theuploadform');
+              form.attr("action", "/upload.aspx");
+              form.attr("method", "post");
+
+              form.attr("encoding", "multipart/form-data");
+              form.attr("enctype", "multipart/form-data");
+
+              form.attr("target", "postiframe");
+              form.attr("file", $('#userfile').val());
+              form.submit();
+
+              $("#postiframe").load(function () {
+                  iframeContents = this.contentWindow.document.body.innerHTML;
+                  $("#textarea").html(iframeContents);
+              });
+
+              return false;
+
+          });
+
+      });
+
+  </script>
+
+
+  <form id="theuploadform">
+      <input id="userfile" name="userfile" size="50" type="file" />
+      <input id="formsubmit" type="submit" value="Send File" />
+  </form>
+
+  <div id="textarea">
+
+    <iframe id="videoIFrame" src="postiframe" title="Iframe Example"></iframe>
+
+      <input type="file" id="myFile" name="inputeVideoFile">
+    </form>
+    <style>
+      #videoIFrame {
+        max-width: 20%;
+        max-height: 20%;
+      }
+    </style>
+
+  </div>
+  -->
+
+</body>
