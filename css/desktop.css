@@ -38,8 +38,8 @@
 /* CAROUSEL 1 */
 .carousel-container1 {
   width: 100%;
-  margin-top: 50px;
-  /* margin: 50px auto; */
+  /* margin-top: 500px;
+  margin: 50px auto; */
   min-height: 200px;
   position: relative;
 }
@@ -95,9 +95,9 @@
 
 /* CAROUSEL 2 */
 .carousel-container2 {
-  width: 100%;
+  /* width: 100%;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 50px; */
   /* margin: 50px auto; */
   min-height: 200px;
   position: relative;

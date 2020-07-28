@@ -1,31 +1,31 @@
-const prev  = document.querySelector('.prev1');
-const next = document.querySelector('.next1');
+const prev1  = document.querySelector('.prev1');
+const next1 = document.querySelector('.next1');
 
-const track = document.querySelector('.track1');
+const track1 = document.querySelector('.track1');
 
-let carouselWidth = document.querySelector('.carousel-container1').offsetWidth;
+let carouselWidth1 = document.querySelector('.carousel-container1').offsetWidth;
 
 window.addEventListener('resize', () => {
-  carouselWidth = document.querySelector('.carousel-container1').offsetWidth;
+  carouselWidth1 = document.querySelector('.carousel-container1').offsetWidth;
 })
 
 let index1 = 0;
 
-next.addEventListener('click', () => {
+next1.addEventListener('click', () => {
   index1++;
-  prev.classList.add('show');
-  track.style.transform = `translateX(-${index1 * carouselWidth}px)`;
+  prev1.classList.add('show');
+  track1.style.transform = `translateX(-${index1 * carouselWidth1}px)`;
   
-  if (track.offsetWidth - (index1 * carouselWidth) < carouselWidth) {
-    next.classList.add('hide');
+  if (track1.offsetWidth - (index1 * carouselWidth1) < carouselWidth1) {
+    next1.classList.add('hide');
   }
 })
 
-prev.addEventListener('click', () => {
+prev1.addEventListener('click', () => {
   index1--;
-  next.classList.remove('hide');
+  next1.classList.remove('hide');
   if (index1 === 0) {
-    prev.classList.remove('show');
+    prev1.classList.remove('show');
   }
-  track.style.transform = `translateX(-${index1 * carouselWidth}px)`;
+  track1.style.transform = `translateX(-${index1 * carouselWidth1}px)`;
 })

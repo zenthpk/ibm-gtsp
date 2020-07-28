@@ -27,7 +27,6 @@
     <!-- INTRO -->
 
     <div class="page" id="intro">
-
         <!-- HEADER -->
         <div class="header">
             
@@ -77,7 +76,7 @@
                     <div class="card-container">
                       <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
                       <div class="card">
-                        <div class="img">ooh cute graphic goes here</div>
+                        <div class="img">IP Video 1</div>
                         <div class="info">Pythagorean Theorem</div>
                       </div>
                       </a>
@@ -86,7 +85,7 @@
                     <div class="card-container">
                       <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
                       <div class="card">
-                        <div class="img">ooh another cute graphic goes here</div>
+                        <div class="img">IP Video 2</div>
                         <div class="info">Being Dumb</div>
                       </div>
                       </a>
@@ -115,74 +114,91 @@
 
             <!-- tabby things -->
             <p>
-              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseVideos" aria-expanded="false" aria-controls="collapseVideos">
-                Videos
-              </button>
-              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseChannels" aria-expanded="false" aria-controls="collapseChannels">
-                Channels
-              </button>
-              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseCourses" aria-expanded="false" aria-controls="collapseCourses">
-                Courses
-              </button>
+              <button class="btn btn-primary" type="button" onclick="allSFLDisplay()">All</button>
+              <button class="btn btn-primary" type="button" onclick="videoDisplay()">Videos</button>
+              <button class="btn btn-primary" type="button" onclick="channelDisplay()">Channels</button>
+              <button class="btn btn-primary" type="button" onclick="courseDisplay()">Courses</button>
             </p>
 
-            <div class="collapse" id="collapseVideos">
-              <div class="card card-body">
-                video carousel here
-              </div>
-            </div>
-
-            <div class="collapse" id="collapseChannels">
-              <div class="card card-body">
-                channel carousel here
-              </div>
-            </div>
-
-            <div class="collapse" id="collapseCourses">
-              <div class="card card-body">
-                course carousel here
-              </div>
-            </div>
-
-
-
-            <!-- Carousel Container 2 -->
-            <div class="carousel-container2">
-              <div class="carousel-inner">
-                <div class="track2">
-                  <div class="card-container">
-                    <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
-                    <div class="card">
-                      <div class="img">ooh cute graphic goes here</div>
-                      <div class="info">Pythagorean Theorem</div>
+            <div id="collapseVideos">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">SFL Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
                     </div>
-                    </a>
-                  </div>
-                  
-                  <div class="card-container">
-                    <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
-                    <div class="card">
-                      <div class="img">ooh another cute graphic goes here</div>
-                      <div class="info">Being Dumb</div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">SFL Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
                     </div>
-                    </a>
                   </div>
                 </div>
               </div>
-              <div class="nav">
-                <button class="prev2">
-                  <i class="material-icons">
-                  keyboard_arrow_left
-                  </i>
-                </button>
-                <button class="next2">
-                  <i class="material-icons">
-                  keyboard_arrow_right
-                  </i>
-                </button>
+            </div>
+
+            <div id="collapseChannels">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">SFL Channel 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">SFL Channel 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
+            <div id="collapseCourses">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">SFL Course 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">SFL Course 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Container Videos Saved For Later -->
         </div>
 
     </div>
@@ -195,52 +211,145 @@
             <h1>Explore</h1>
             <!-- tabby things -->
             <p>
-              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseEnglish" aria-expanded="false" aria-controls="collapseEnglish">
-                English
-              </button>
-              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseMath" aria-expanded="false" aria-controls="collapseMath">
-                Math
-              </button>
-              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseScience" aria-expanded="false" aria-controls="collapseScience">
-                Science
-              </button>
-              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseSocialStudies" aria-expanded="false" aria-controls="collapseSocialStudies">
-                Social Studies
-              </button>
-              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseArtMusic" aria-expanded="false" aria-controls="collapseArtMusic">
-                Art & Music
-              </button>
+              <button class="btn btn-primary" type="button" onclick="allExploreDisplay()">All</button>
+              <button class="btn btn-primary" type="button" onclick="englishDisplay()">English</button>
+              <button class="btn btn-primary" type="button" onclick="mathDisplay()">Math</button>
+              <button class="btn btn-primary" type="button" onclick="scienceDisplay()">Science</button>
+              <button class="btn btn-primary" type="button" onclick="socialstudiesDisplay()">Social Studies</button>
+              <button class="btn btn-primary" type="button" onclick="artmusicDisplay()">Art & Music</button>
             </p>
 
-            <div class="collapse" id="collapseEnglish">
-              <div class="card card-body">
-                ENGLISH VIDS HERE BRO
+            <div id="collapseEnglish">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">English Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">English Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="collapse" id="collapseMath">
-              <div class="card card-body">
-                MATH VIDS HERE BRO
+            <div id="collapseMath">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Math Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Math Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="collapse" id="collapseScience">
-              <div class="card card-body">
-                SCIENCE VIDS HERE BRO
+            <div id="collapseScience">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Science Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Science Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="collapse" id="collapseSocialStudies">
-              <div class="card card-body">
-                SOCIAL STUDIES VIDS HERE BRO
+            <div id="collapseSocialStudies">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Social Studies Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Social Studies Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="collapse" id="collapseArtMusic">
-              <div class="card card-body">
-                ART & MUSIC VIDS HERE BRO
+            <div id="collapseArtMusic">
+              <div class="carousel-container2">
+                <div class="carousel-inner">
+                  <div class="track2">
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Art Music Video 1</div>
+                        <div class="info">Pythagorean Theorem</div>
+                      </div>
+                      </a>
+                    </div>
+                    
+                    <div class="card-container">
+                      <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                      <div class="card">
+                        <div class="img">Art Music Video 2</div>
+                        <div class="info">Being Dumb</div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+
+
             
             <div class="arrow-up">
             <a href="./index-desktop.html#intro"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
@@ -254,6 +363,133 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script>
+  $(function(){
+      $('#carousel').load('carousel.html');
+  });
+</script>
+
+
+<script>
+  function allSFLDisplay() {
+    var videos = document.getElementById('collapseVideos');
+    var channels = document.getElementById('collapseChannels');
+    var courses = document.getElementById('collapseCourses');
+    videos.style.display = 'block';
+    channels.style.display = 'block';
+    courses.style.display = 'block';
+  }
+
+  function videoDisplay() {
+    var videos = document.getElementById('collapseVideos');
+    var channels = document.getElementById('collapseChannels');
+    var courses = document.getElementById('collapseCourses');
+    videos.style.display = 'block';
+    channels.style.display = 'none';
+    courses.style.display = 'none';
+  }
+
+  function channelDisplay() {
+    var videos = document.getElementById('collapseVideos');
+    var channels = document.getElementById('collapseChannels');
+    var courses = document.getElementById('collapseCourses');
+    videos.style.display = 'none';
+    channels.style.display = 'block';
+    courses.style.display = 'none';
+  }
+
+  function courseDisplay() {
+    var videos = document.getElementById('collapseVideos');
+    var channels = document.getElementById('collapseChannels');
+    var courses = document.getElementById('collapseCourses');
+    videos.style.display = 'none';
+    channels.style.display = 'none';
+    courses.style.display = 'block';
+  }
+</script>
+
+<script>
+  function allExploreDisplay() {
+    var english = document.getElementById('collapseEnglish');
+    var math = document.getElementById('collapseMath');
+    var science = document.getElementById('collapseScience');
+    var socialstudies = document.getElementById('collapseSocialStudies');
+    var artmusic = document.getElementById('collapseArtMusic');
+    english.style.display = 'block';
+    math.style.display = 'block';
+    science.style.display = 'block';
+    socialstudies.style.display = 'block';
+    artmusic.style.display = 'block';
+  }
+
+  function englishDisplay() {
+    var english = document.getElementById('collapseEnglish');
+    var math = document.getElementById('collapseMath');
+    var science = document.getElementById('collapseScience');
+    var socialstudies = document.getElementById('collapseSocialStudies');
+    var artmusic = document.getElementById('collapseArtMusic');
+    english.style.display = 'block';
+    math.style.display = 'none';
+    science.style.display = 'none';
+    socialstudies.style.display = 'none';
+    artmusic.style.display = 'none';
+  }
+
+  function mathDisplay() {
+    var english = document.getElementById('collapseEnglish');
+    var math = document.getElementById('collapseMath');
+    var science = document.getElementById('collapseScience');
+    var socialstudies = document.getElementById('collapseSocialStudies');
+    var artmusic = document.getElementById('collapseArtMusic');
+    english.style.display = 'none';
+    math.style.display = 'block';
+    science.style.display = 'none';
+    socialstudies.style.display = 'none';
+    artmusic.style.display = 'none';
+  }
+
+  function scienceDisplay() {
+    var english = document.getElementById('collapseEnglish');
+    var math = document.getElementById('collapseMath');
+    var science = document.getElementById('collapseScience');
+    var socialstudies = document.getElementById('collapseSocialStudies');
+    var artmusic = document.getElementById('collapseArtMusic');
+    english.style.display = 'none';
+    math.style.display = 'none';
+    science.style.display = 'block';
+    socialstudies.style.display = 'none';
+    artmusic.style.display = 'none';
+  }
+
+  function socialstudiesDisplay() {
+    var english = document.getElementById('collapseEnglish');
+    var math = document.getElementById('collapseMath');
+    var science = document.getElementById('collapseScience');
+    var socialstudies = document.getElementById('collapseSocialStudies');
+    var artmusic = document.getElementById('collapseArtMusic');
+    english.style.display = 'none';
+    math.style.display = 'none';
+    science.style.display = 'none';
+    socialstudies.style.display = 'block';
+    artmusic.style.display = 'none';
+  }
+
+  function artmusicDisplay() {
+    var english = document.getElementById('collapseEnglish');
+    var math = document.getElementById('collapseMath');
+    var science = document.getElementById('collapseScience');
+    var socialstudies = document.getElementById('collapseSocialStudies');
+    var artmusic = document.getElementById('collapseArtMusic');
+    english.style.display = 'none';
+    math.style.display = 'none';
+    science.style.display = 'none';
+    socialstudies.style.display = 'none';
+    artmusic.style.display = 'block';
+  }
+
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/dropdown.js"></script>
