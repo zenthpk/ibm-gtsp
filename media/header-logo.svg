@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 633.8 182.7" style="enable-background:new 0 0 633.8 182.7;" xml:space="preserve">
+	 viewBox="0 0 633.8 182.6" style="enable-background:new 0 0 633.8 182.6;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#0F62FE;}
 	.st1{fill:none;}
+	.st2{opacity:0.97;}
+	.st3{fill:none;stroke:#0F62FE;stroke-width:4;stroke-miterlimit:10;}
 </style>
 <title>Group 8</title>
 <desc>Created with Sketch.</desc>
@@ -22,9 +24,8 @@
 					<path id="Fill-5" class="st0" d="M-152.6-197c-36.4,0-68.2,20.6-85.3,51.4v17.1c20.4-24.4,51-39.9,85.3-39.9
 						s64.9,15.5,85.3,39.9v-17.1C-84.5-176.3-116.2-197-152.6-197"/>
 				</g>
-				<path id="Fill-8" class="st0" d="M74-172.7c0,9.4-7.6,17.1-17,17.1s-17-7.7-17-17.1c0-9.4,7.6-17.1,17-17.1S74-182.2,74-172.7"
-					/>
-				<path id="Fill-10" class="st0" d="M116.7-172.7c0,9.4-7.6,17.1-17,17.1s-17-7.7-17-17.1c0-9.4,7.6-17.1,17-17.1
+				<path id="Fill-8" class="st0" d="M74-172.7c0,9.4-7.6,17.1-17,17.1s-17-7.7-17-17.1s7.6-17.1,17-17.1S74-182.2,74-172.7"/>
+				<path id="Fill-10" class="st0" d="M116.7-172.7c0,9.4-7.6,17.1-17,17.1s-17-7.7-17-17.1s7.6-17.1,17-17.1
 					S116.7-182.2,116.7-172.7"/>
 				<path id="Fill-12" class="st0" d="M-16.5-107.1l57.9-25.7L21.9-70.6c-3.7,11.1-13,22-28.8,22c-16.4,0-29.8-13.4-29.8-29.9
 					C-36.8-92.5-28.2-101.9-16.5-107.1"/>
@@ -64,5 +65,9 @@
 			</g>
 		</g>
 	</g>
+</g>
+<g class="st2">
+	<polyline class="st3" points="19.3,-56.4 35.1,-69.9 50,-56.4 	"/>
+	<line class="st3" x1="35.2" y1="-69.6" x2="35.2" y2="-28.9"/>
 </g>
 </svg>
