@@ -48,10 +48,26 @@
             </div>
           </form>
 
+
+          <p>Your current video that you are about to upload</p>
+
+          <iframe id="videoIFrame" src="cathoSampleVideo.mp4" title="Iframe Example"></iframe>
+
+          <style>
+            #videoIFrame {
+              max-width: 60%;
+              max-height: 60%;
+            }
+          </style>
+
+          <p> Note to reader: there is stuff supposed to be right aligned but i got lazy</p> 
+
           <div class="form-group">
             <p>Please enter your video description here </p>
             <textarea name="Text1" cols="90" rows="10"></textarea>
           </div>
+
+          <!-->A little bit of js to make the video proportional to the size of the screen  <-->
 
           <form action=""> <!--Insert page to redirect user to-->
             <input type="file" id="myFile" name="filename">
@@ -59,7 +75,7 @@
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
 
-          <p> stub for selecting tags here </p> 
+          <p> stub for selecting tags here </p>
 
         </div>
     </div>
