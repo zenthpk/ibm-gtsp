@@ -222,63 +222,6 @@
 </div>
 </div>
 
-<!-- COMMENTS SECTION -->
-
-    <div class="contents">
-      
-
-      <h2>Leave us a comment!</h2></br>
-
-      <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-      <script src="js/firebaseMessage.js"></script>
-      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
-
-      <script>
-        function load()  {
-            updateDisplay();
-  
-        }
-        window.onload = load;
-      </script>
-
-      <div class="form-row">
-        <div class="col-6"> 
-        <p>Name</p>
-        <select type="text" class="form-control p" id='messageNameField' value='' name="enterName">
-          <option value="Omar Elbarmawi">Omar Elbarmawi</option>
-          <option value="Anonymous">Anonymous</option>
-        </select><br/>
-        </div>
-        <div class="col-6">  
-        <p>Rating</p>
-        <select type="text" class="custom-select p" id='messageRatingField' style="text-align: left; color: #0f62fe;" value='' name="enterText">
-          <option value="★☆☆☆☆">★☆☆☆☆</option>
-          <option value="★★☆☆☆">★★☆☆☆</option>
-          <option value="★★★☆☆">★★★☆☆</option>
-          <option value="★★★★☆">★★★★☆</option>
-          <option selected value="★★★★★">★★★★★</option>
-        </select><br/>
-        </div>
-        <div class="col-12">
-        <p>Message</p>
-        <textarea type="text" class="form-control p" id='messageTextField' style="height: 100px; text-align: left;" value='' name="enterText"></textarea><br/> 
-        </div>
-      </div>
-      </br>  
-      <button type="submit" class="btn btn-primary" onClick="writeFunction()">Share</button>
-      <br/><br/><br/><br/>
-
-    <h3><p>Comments</h3>
-    <div id="messageList">
-    </div>
-    <br/>
-    
-    <div class="arrow-up center">
-        <a href="./about.html#mission"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
-    </div>
-      
-    </div>
   </br></br>
 
   <!-- </div>

@@ -67,40 +67,89 @@
 
       <div class="contents"> 
         <h2 class="p-hor">Pythagorean Theorem</h2>
+          <video id="mainVideo"  controls>
+            <source src="khan-pythagorean.mp4" type="video/mp4">
+          Dude the video is not working LmAOOOO
+          </video>
 
-        <video id="mainVideo"  controls>
-          <source src="khan-pythagorean.mp4" type="video/mp4">
-        Dude the video is not working LmAOOOO
-        </video>
+          <style>
+            #mainVideo {
+              max-width: 100%;
+              max-height: 100%;
+              margin-bottom: 20px;
+            }
+          </style>
 
-        <style>
-          #mainVideo {
-            max-width: 100%;
-            max-height: 75%;
-          }
-        </style>
+        <h3>Tags</h3>
+        <div id="metaInfo" >
+          <p> Here lies the meta information about the video such as a link the the creators profile and the rating of this video
+          </p>
+        </div>
+
+        <h3>Attached Files</h3>
+        <div id="metaInfo" >
+          <p> Here lies the files the uploader posted with the video. May also include the transcript
+          </p>
+        </div>
+
       </div>
-
     </div>
 
     <!-- PROGRAMS -->
-    <div>
+    <div class="contents">
+      
+    <!-- COMMENTS SECTION -->
+      <h2>Leave us a comment!</h2></br>
 
-      <div id="metaInfo" >
-        <p> Here lies the meta information about the video such as
-          a link the the creators profile and the rating of this video
-        </p>
+      <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+      <script src="js/firebaseMessage.js"></script>
+      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+      <script>
+        function load()  {
+            updateDisplay();
+  
+        }
+        window.onload = load;
+      </script>
+
+      <div class="form-row">
+        <div class="col-6"> 
+        <p>Name</p>
+        <select type="text" class="form-control p" id='messageNameField' value='' name="enterName">
+          <option value="Omar Elbarmawi">Omar Elbarmawi</option>
+          <option value="Anonymous">Anonymous</option>
+        </select><br/>
+        </div>
+        <div class="col-6">  
+        <p>Rating</p>
+        <select type="text" class="custom-select p" id='messageRatingField' style="text-align: left; color: #0f62fe;" value='' name="enterText">
+          <option value="★☆☆☆☆">★☆☆☆☆</option>
+          <option value="★★☆☆☆">★★☆☆☆</option>
+          <option value="★★★☆☆">★★★☆☆</option>
+          <option value="★★★★☆">★★★★☆</option>
+          <option selected value="★★★★★">★★★★★</option>
+        </select><br/>
+        </div>
+        <div class="col-12">
+        <p>Message</p>
+        <textarea type="text" class="form-control p" id='messageTextField' style="height: 100px; text-align: left;" value='' name="enterText"></textarea><br/> 
+        </div>
       </div>
+      </br>  
+      <button type="submit" class="btn btn-primary" onClick="writeFunction()">Share</button>
+      <br/><br/><br/><br/>
 
-      <div class="Comments">
-        <h2>Comment Section</h2>
-        <p>Here is where all of our comments are going to be</p>
-      </div>
-
-
-
-
-
+        <h3><p>Comments</h3>
+        <div id="messageList">
+        </div>
+        <br/>
+        
+        <div class="arrow-up center">
+            <a href="./about.html#mission"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
+        </div>
+          
     </div>
 
 
