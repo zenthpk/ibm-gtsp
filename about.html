@@ -12,19 +12,19 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/desktop.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-  
+
 </head>
 
 <title>IBM Global Classrooms</title>
 
 <body>
-  
+
   <!-- INTRO -->
 
   <div class="page" style="height: auto; min-height: 100vh;" id="mission">
 
   <div class="head row">
-    
+
     <div class="col-3" style="float: left;">
     <a href="./index-desktop.html"><img class="header-logo" src="./media/header-logo.svg"></img></a>
     </div>
@@ -79,11 +79,11 @@
     <style>
       #videoIFrame {
         max-width: 60%;
-        max-height: 60%;
+        height: 400px;
       }
     </style>
 
-    <p> Note to reader: there is stuff supposed to be right aligned but i got lazy</p> 
+    <p> Note to reader: there is stuff supposed to be right aligned but i got lazy</p>
 
     <div class="form-group">
       <p>Please enter your video description here </p>
@@ -96,7 +96,7 @@
       <input type="file" id="myFile" name="filename">
       <br><br><br>
       <button type="submit" class="btn btn-primary" onclick="genSuggested()">Submit</button>
-    </form>     
+    </form>
 
     </br></br>
   </h1>
@@ -104,7 +104,7 @@
 </div>
 
 <div class="page" id="additional">
-  
+
 <div  class="contents">
   <div class="input-group input-group-lg">
     <input type="text" class="form-control" id="textbox" placeholder="Ex: Algebra" aria-label="Large"
@@ -223,7 +223,7 @@
 </div>
 
     <div class="contents">
-      
+
       <div>
         <button onclick="genSuggested()">Add onclick to Upload</button>
 
@@ -238,20 +238,20 @@
       <script>
         function load()  {
             updateDisplay();
-  
+
         }
         window.onload = load;
       </script>
 
       <div class="form-row">
-        <div class="col-6"> 
+        <div class="col-6">
         <p>Name</p>
         <select type="text" class="form-control p" id='messageNameField' value='' name="enterName">
           <option value="Omar Elbarmawi">Omar Elbarmawi</option>
           <option value="Anonymous">Anonymous</option>
         </select><br/>
         </div>
-        <div class="col-6">  
+        <div class="col-6">
         <p>Rating</p>
         <select type="text" class="custom-select p" id='messageRatingField' style="text-align: left; color: #0f62fe;" value='' name="enterText">
           <option value="★☆☆☆☆">★☆☆☆☆</option>
@@ -263,10 +263,10 @@
         </div>
         <div class="col-12">
         <p>Message</p>
-        <textarea type="text" class="form-control p" id='messageTextField' style="height: 100px; text-align: left;" value='' name="enterText"></textarea><br/> 
+        <textarea type="text" class="form-control p" id='messageTextField' style="height: 100px; text-align: left;" value='' name="enterText"></textarea><br/>
         </div>
       </div>
-      </br>  
+      </br>
       <button type="submit" class="btn btn-primary" onClick="writeFunction()">Share</button>
       <br/><br/><br/><br/>
 
@@ -274,22 +274,22 @@
     <div id="messageList">
     </div>
     <br/>
-    
+
     <div class="arrow-up">
         <a href="./about.html#mission"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
 
       </div>
-      
+
       <div>
 
         <div class="input-group input-group-lg">
           <input type="text" class="form-control" id="textbox" placeholder="Ex: Algebra" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
           <input type="submit" id="btnAdd" onclick="add()" class="btn btn-success">
-        </div>        
-      
+        </div>
+
         </br></br>
         <p id="tagList">Tags:</p>
-      
+
         <script>
           var possibleTags = ["Algebra", "Stoichiometry", "Pythagorean", "Being Dumb", "Euclidean Geometry", "Counting", "Reading", "Literary Analysis", "Magnetism", "Feeding a Cat", "Writing"];
           var currentTags = [];
@@ -388,13 +388,13 @@
           }
 
         </script>
-      
+
         <p id="suggestedList">Suggested Tags:</p>
-      
+
         <p id="transcript"></p>
-      
+
       </div>
-      
+
     </div>
   </br></br>
 
