@@ -62,14 +62,26 @@
 
 <div class="contents">
   <h1 class="p-hor">What content would you like to upload? </h1>
+
+
+    <form action=""> <!--Insert page to redirect user to-->
+      <input type="file" id="myFile" name="filename">
+      <p>Upload your file here</p>
+      <br><br><br>
+      <button type="submit" class="btn btn-primary" onclick="genSuggested()">Submit</button>
+    </form>
     <form>
       <div class="form-group">
-        <label for="videoTitle">Input Video Title</label>
 
-        <input type="title" class="form-control" id="inputVideoTitle" aria-describedby="emailHelp" placeholder="Video Title" rows=3>
 
+        <input type="text" id="titleField" name="enterName" value="" placeholder="Enter video title here">
       </div>
     </form>
+    <style>
+      #titleField {
+        width: 300px;
+      }
+    </style>
 
 
     <p>Your current video that you are about to upload</p>
@@ -90,13 +102,6 @@
       <textarea name="Text1" cols="90" rows="10"></textarea>
     </div>
 
-    <!--A little bit of js to make the video proportional to the size of the screen  <-->
-
-    <form action=""> <!--Insert page to redirect user to-->
-      <input type="file" id="myFile" name="filename">
-      <br><br><br>
-      <button type="submit" class="btn btn-primary" onclick="genSuggested()">Submit</button>
-    </form>
 
     </br></br>
   </h1>
