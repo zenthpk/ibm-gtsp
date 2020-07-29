@@ -38,8 +38,8 @@
 /* CAROUSEL 1 */
 .carousel-container1 {
   width: 100%;
-  /* margin-top: 500px;
-  margin: 50px auto; */
+  margin-bottom: 30px;
+  /* margin: 50px auto; */
   min-height: 200px;
   position: relative;
 }
@@ -95,11 +95,10 @@
 
 /* CAROUSEL 2 */
 .carousel-container2 {
-  /* width: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px; */
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 30px;
   /* margin: 50px auto; */
-  margin-top: 50px;
   min-height: 200px;
   position: relative;
 }
@@ -200,6 +199,7 @@ h2 {
   color: #0f62fe;
   text-align: left;
   letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 
 h3 {
