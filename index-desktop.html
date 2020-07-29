@@ -105,15 +105,10 @@
                 </div>
               </div>
 
-        </div>
-
-        <!-- Saved for later -->
-        <div class="contents">
           <h2 class="p-hor">Saved for Later</h2>
 
             <!-- tabby things -->
             <p>
-              <button class="btn btn-primary" type="button" onclick="allSFLDisplay()">All</button>
               <button class="btn btn-primary" type="button" onclick="videoDisplay()">Videos</button>
               <button class="btn btn-primary" type="button" onclick="channelDisplay()">Channels</button>
               <button class="btn btn-primary" type="button" onclick="courseDisplay()">Courses</button>
@@ -145,7 +140,7 @@
               </div>
             </div>
 
-            <div id="collapseChannels">
+            <div id="collapseChannels" style="display: none">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -171,7 +166,7 @@
               </div>
             </div>
 
-            <div id="collapseCourses">
+            <div id="collapseCourses" style="display: none;">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -210,7 +205,6 @@
             <h1>Explore</h1>
             <!-- tabby things -->
             <p>
-              <button class="btn btn-primary" type="button" onclick="allExploreDisplay()">All</button>
               <button class="btn btn-primary" type="button" onclick="englishDisplay()">English</button>
               <button class="btn btn-primary" type="button" onclick="mathDisplay()">Math</button>
               <button class="btn btn-primary" type="button" onclick="scienceDisplay()">Science</button>
@@ -244,7 +238,7 @@
               </div>
             </div>
 
-            <div id="collapseMath">
+            <div id="collapseMath" style="display: none;">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -270,7 +264,7 @@
               </div>
             </div>
 
-            <div id="collapseScience">
+            <div id="collapseScience" style="display: none;">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -296,7 +290,7 @@
               </div>
             </div>
 
-            <div id="collapseSocialStudies">
+            <div id="collapseSocialStudies" style="display: none;">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -322,7 +316,7 @@
               </div>
             </div>
 
-            <div id="collapseArtMusic">
+            <div id="collapseArtMusic" style="display: none;">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -370,15 +364,6 @@
 
 
 <script>
-  function allSFLDisplay() {
-    var videos = document.getElementById('collapseVideos');
-    var channels = document.getElementById('collapseChannels');
-    var courses = document.getElementById('collapseCourses');
-    videos.style.display = 'block';
-    channels.style.display = 'block';
-    courses.style.display = 'block';
-  }
-
   function videoDisplay() {
     var videos = document.getElementById('collapseVideos');
     var channels = document.getElementById('collapseChannels');
@@ -408,19 +393,6 @@
 </script>
 
 <script>
-  function allExploreDisplay() {
-    var english = document.getElementById('collapseEnglish');
-    var math = document.getElementById('collapseMath');
-    var science = document.getElementById('collapseScience');
-    var socialstudies = document.getElementById('collapseSocialStudies');
-    var artmusic = document.getElementById('collapseArtMusic');
-    english.style.display = 'block';
-    math.style.display = 'block';
-    science.style.display = 'block';
-    socialstudies.style.display = 'block';
-    artmusic.style.display = 'block';
-  }
-
   function englishDisplay() {
     var english = document.getElementById('collapseEnglish');
     var math = document.getElementById('collapseMath');
