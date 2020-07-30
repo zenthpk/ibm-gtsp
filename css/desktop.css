@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+textarea  
+{  
+  font-family: 'Poppins', sans-serif;
+  font-size: 11pt;
+  color: #4b5355;
+  font-weight: 150;
+}
+
+iframe {
+  width:100%;
+  height:500px;
+  margin-bottom: 15px;
+}
 
 /* CAROUSEL ALL */
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 .nav button {
   width: 60px;
   height: 60px;
