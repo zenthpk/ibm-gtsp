@@ -445,16 +445,34 @@ body {
   border-color: #0f62fe;
 }
 
-.btn-success {
+.btn-outline-info:hover {
   color: #fff;
   background-color: #0f62fe;
   border-color: #0f62fe;
 }
 
-.btn-info {
+.btn-outline-info:active {
   color: #fff;
   background-color: #0f62fe;
   border-color: #0f62fe;
+}
+
+.btn-success, .btn-success:hover {
+  color: #fff;
+  background-color: #0f62fe;
+  border-color: #0f62fe;
+}
+
+.btn-info, .btn-info:hover {
+  color: #fff;
+  background-color: #0f62fe;
+  border-color: #0f62fe;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #0f62fe;
+  border-color: #0f62fe; /*set the color you want here*/
 }
 
 /* .dropbtn {
