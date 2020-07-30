@@ -11,10 +11,11 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/desktop.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
 </head>
 
-<title>IBM Global Classrooms</title>
+<title>Lend&Learn | IBM's Global Classroom</title>
 
 <body>
 
@@ -25,7 +26,7 @@
   <div class="head row">
 
     <div class="col-3" style="float: left;">
-    <a href="./index-desktop.html"><img class="header-logo" src="./media/header-logo.svg"></img></a>
+    <a href="./index-desktop.html"><img class="header-logo" src="./media/header-logo.svg" style="border-top-right-radius: 0px;border-top-left-radius: 0px;"></img></a>
     </div>
 
     <div class="col-6" style="float: left; width: 170vw;">
@@ -53,7 +54,7 @@
 
     <div class="header-link col-3" style="float: left;">
         <a class="header-link" href="./index-desktop.html#programs">Profile</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        <a class="header-link" href="./about.html">Create</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <a class="header-link" href="blankAbout.html">Create</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
         <a class="header-link" href="./index-desktop.html">Home</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
     </div>
 
@@ -61,18 +62,21 @@
 
 
   <div class="contents">
-    <h1 class="p-hor">What content would you like to upload? </h1>
+    <h2 class="p-hor">What content would you like to upload? </h2>
+
+    <form action="about.html"> <!--Insert page to redirect user to-->
+      <input type="file" id="myFile" name="filename">
+      <br>
+      <input type="submit" value="Upload"></input>
+    </form>
+
       <form>
         <div class="form-group">
-          <input type="title" class="form-control" id="inputVideoTitle" aria-describedby="emailHelp" placeholder="Video Title" rows=3>
+          <input type="title" class="form-control" id="inputVideoTitle" aria-describedby="emailHelp" placeholder="Video Title" rows=3 style="margin-top: 20px;"> 
         </div>
       </form>
 
-      
-      <!-- !!!!begin left side!!!! -->
-      <p>Your current video that you are about to upload</p>
-
-      <iframe id="videoIFrame" src="khan-pythagorean.mp4" title="Iframe Example"></iframe>
+      <iframe id="videoIFrame" src="khan-pythagorean.mp4" title="Iframe Example" style="border-radius: 5px"></iframe>
 
       <!-- <style>
         #videoIFrame {
@@ -80,32 +84,30 @@
           max-height: 60%;
         }
       </style> -->
-      
+
       <!-- !!!!end left side!!!! -->
 
       <!-- !!!!begin right side!!!! -->
-      <div class="form-group">
-        <p id="description"><strong>Description: </strong></p>
-        <textarea name="Text1" style="width:100%" placeholder="Enter a description for the video"></textarea>
+      <div class="input-group input-group-md" style="margin-bottom: 10px;">
+        <textarea type="text" class="form-control" id="textbox" placeholder="Enter a description for the video" aria-label="Large"
+          aria-describedby="inputGroup-sizing-sm" style="border-radius: 5px;"></textarea>
       </div>
-
       <!--A little bit of js to make the video proportional to the size of the screen  <-->
 
 
-      <form action=""> <!--Insert page to redirect user to-->
-        <input type="file" id="myFile" name="filename">
-        <br><br><br>
-      </form> 
+
 
 
       <!-- Tags -->
+      <br/>
+      <h3>Tags</h3>
       <div class="input-group input-group-md" style="margin-bottom: 10px;">
         <input type="text" class="form-control" id="textbox" placeholder="Ex: Algebra" aria-label="Large"
           aria-describedby="inputGroup-sizing-sm" style="border-radius: 5px;">
         <input type="submit" value="Add tag" id="btnAdd" onclick="add()" class="btn btn-success" style="margin-left: 10px;">
       </div>
 
-      <p id="tagList"><strong>Tags:</strong></p>
+      <p id="tagList"><strong>Tags: &nbsp;</strong></p>
 
       <script>
         var possibleTags = ["Algebra", "Pythagorean Theorem", "Geometry", "Triangles", "Multiplication", "Substitution", "Math"];
@@ -166,7 +168,7 @@
         }
 
         function tagAlg(transcript) {
-          
+
         }
 
         function addSuggest(newVal) {
@@ -206,26 +208,42 @@
 
         </script>
 
-        <p id="suggestedList"><strong>Suggested Tags:</strong></p>
+        <p id="suggestedList"><strong>Suggested Tags: </strong></p>
 
 
         <p id="transcript"></p>
 
+        <h3>Attached Files</h3>
+        <form action="about.html"> <!--Insert page to redirect user to-->
+          <input type="file" id="myFile" name="filename"></input>
+        </br>
+          <input type="submit" value="Upload"></input>
+        </form>
+      </br></br>
+
         <!-- !!!!end right side!!!! -->
-      
+
       <!-- Upload video  -->
-      <button type="submit" class="btn btn-primary" onclick="genSuggested()">Generate suggested tags</button>
-          
+      <a href="./index-desktop.html" target="_blank" style="text-decoration:none;">
+        <!-- <button class="btn btn-primary" type="button" aria-pressed="true">Submit</button> -->
+        <button href="./index-desktop.html" class="btn btn-primary center" style="width: 100%;" type="button" aria-pressed="true">Submit</button>
+      
+      </a>
 
       
+
+
 
 
       </br></br>
-    </h1>
+      <div class="arrow-up">
+        <a href="./about.html#intro"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
+        <div>
+        </br></br></br>
   </div>
 
 </div>
-  
+
   <!-- FOOTER -->
 
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
