@@ -63,13 +63,24 @@
 
   <div class="contents">
     <h1 class="p-hor">What content would you like to upload? </h1>
+
+    <form action=""> <!--Insert page to redirect user to-->
+      <input type="file" id="myFile" name="filename">
+      <br>
+      <input type="submit">Upload your video here</input>
+    </form>
+
+      <br><br>
+      <p>Input your video title here</p>
       <form>
         <div class="form-group">
           <input type="title" class="form-control" id="inputVideoTitle" aria-describedby="emailHelp" placeholder="Video Title" rows=3>
         </div>
       </form>
 
-      
+
+
+
       <!-- !!!!begin left side!!!! -->
       <p>Your current video that you are about to upload</p>
 
@@ -81,7 +92,7 @@
           max-height: 60%;
         }
       </style> -->
-      
+
       <!-- !!!!end left side!!!! -->
 
       <!-- !!!!begin right side!!!! -->
@@ -93,10 +104,7 @@
       <!--A little bit of js to make the video proportional to the size of the screen  <-->
 
 
-      <form action=""> <!--Insert page to redirect user to-->
-        <input type="file" id="myFile" name="filename">
-        <br><br><br>
-      </form> 
+
 
 
       <!-- Tags -->
@@ -167,7 +175,7 @@
         }
 
         function tagAlg(transcript) {
-          
+
         }
 
         function addSuggest(newVal) {
@@ -213,12 +221,15 @@
         <p id="transcript"></p>
 
         <!-- !!!!end right side!!!! -->
-      
-      <!-- Upload video  -->
-      <button type="submit" class="btn btn-primary" onclick="genSuggested()">Generate suggested tags</button>
-          
 
-      
+      <!-- Upload video  -->
+      <form>
+         <input type="submit" formaction="index-desktop.html">Upload your video!</input>
+      </form>
+
+
+
+
 
 
       </br></br>
@@ -229,7 +240,7 @@
   </div>
 
 </div>
-  
+
   <!-- FOOTER -->
 
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
