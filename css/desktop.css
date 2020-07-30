@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+img {
+  width: 260px;
+  /* max-height: 100%; */
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  max-height: 100%;
+  /* object-fit: fill; */
+}
+
 textarea  
 {  
   font-family: 'Poppins', sans-serif;
@@ -29,6 +38,7 @@ iframe {
 
 .card-container {
   width: 275px;
+  /* height: 30px; */
   flex-shrink: 0;
   height: 250px;
   padding-right:15px;
@@ -52,18 +62,19 @@ iframe {
   flex: 1;
 }
 .card .img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 208px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 100%;
   background-color: #d0e2ff;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
 }
 .card .info {
   flex-basis: 40px;
-  background: #c1c7cd;
+  background: #878d96;
   color: #fff;
   flex-grow: 0;
   padding: 10px;
