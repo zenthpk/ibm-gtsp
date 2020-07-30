@@ -67,38 +67,20 @@
     <form action="about.html"> <!--Insert page to redirect user to-->
       <input type="file" id="myFile" name="filename">
       <br>
-      <input type="submit">Upload your video here</input>
+      <input type="submit" value="Upload"></input>
     </form>
 
-<br><br>
-    <p>Input your video title here</p>
       <form>
         <div class="form-group">
-          <input type="title" class="form-control" id="inputVideoTitle" aria-describedby="emailHelp" placeholder="Video Title" rows=3>
+          <input type="title" class="form-control" id="inputVideoTitle" aria-describedby="emailHelp" placeholder="Video Title" rows=3 style="margin-top: 20px;"> 
         </div>
       </form>
 
+      <iframe id="videoIFrame" src="" title="Iframe Example" style="border-radius: 5px;"></iframe>
 
-
-
-      <!-- !!!!begin left side!!!! -->
-      <p>Your current video that you are about to upload</p>
-
-      <iframe id="videoIFrame" src="" title="Iframe Example"></iframe>
-
-      <!-- <style>
-        #videoIFrame {
-          max-width: 60%;
-          max-height: 60%;
-        }
-      </style> -->
-
-      <!-- !!!!end left side!!!! -->
-
-      <!-- !!!!begin right side!!!! -->
-      <div class="form-group">
-        <p id="description"><strong>Description: </strong></p>
-        <textarea name="Text1" style="width:100%" placeholder="Enter a description for the video"></textarea>
+      <div class="input-group input-group-md" style="margin-bottom: 10px;">
+        <textarea type="text" class="form-control" id="textbox" placeholder="Enter a description for the video" aria-label="Large"
+          aria-describedby="inputGroup-sizing-sm" style="border-radius: 5px;"></textarea>
       </div>
 
       <!--A little bit of js to make the video proportional to the size of the screen  <-->
@@ -223,17 +205,16 @@
         <!-- !!!!end right side!!!! -->
 
       <!-- Upload video  -->
-      <form>
-         <input type="submit" formaction="about.html">Upload your video!</input>
-      </form>
-
+      <a href="./about.html" target="_blank" style="text-decoration:none;">
+        <button class="btn btn-primary" type="button" aria-pressed="true">Submit</button>
+      </a>
 
 
 
 
       </br></br>
       <div class="arrow-up">
-        <a href="./about.html#intro"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
+        <a href="./blankAbout.html"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
         <div>
         </br></br></br>
   </div>
