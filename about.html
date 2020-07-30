@@ -108,7 +108,7 @@
       <p id="tagList"><strong>Tags:</strong></p>
 
       <script>
-        var possibleTags = ["Algebra", "Stoichiometry", "Pythagorean", "Being Dumb", "Euclidean Geometry", "Counting", "Reading", "Literary Analysis", "Magnetism", "Feeding a Cat", "Writing"];
+        var possibleTags = ["Algebra", "Pythagorean Theorem", "Geometry", "Triangles", "Multiplication", "Substitution", "Math"];
         var currentTags = [];
         var suggestedTags = [];
 
@@ -117,7 +117,7 @@
           var newVal = document.getElementById("textbox").value;
           newTag.id = newVal;
           newTag.textContent = newVal;
-          newTag.className = "btn btn-warning";
+          newTag.className = "btn btn-info";
           newTag.onclick = function () { remove(newTag) };
 
           var tags = document.getElementById("tagList");
@@ -166,14 +166,14 @@
         }
 
         function tagAlg(transcript) {
-          shuffle(suggestedTags)
+          
         }
 
         function addSuggest(newVal) {
           var newTag = document.createElement("button");
           newTag.id = newVal + "_sug";
           newTag.textContent = newVal;
-          newTag.className = "btn btn-outline-warning";
+          newTag.className = "btn btn-outline-info";
           newTag.onclick = function () { addFromTag(newVal) };
 
           var tags = document.getElementById("suggestedList");
@@ -191,7 +191,7 @@
           var newTag = document.createElement("button");
           newTag.id = newVal;
           newTag.textContent = newVal;
-          newTag.className = "btn btn-warning";
+          newTag.className = "btn btn-info";
           newTag.onclick = function () { remove(newTag) };
 
           var tags = document.getElementById("tagList");
