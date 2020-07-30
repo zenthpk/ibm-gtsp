@@ -105,18 +105,13 @@
                 </div>
               </div>
 
-        </div>
-
-        <!-- Saved for later -->
-        <div class="contents">
           <h2 class="p-hor">Saved for Later</h2>
 
             <!-- tabby things -->
             <p>
-              <button class="btn btn-primary" type="button" onclick="allSFLDisplay()">All</button>
-              <button class="btn btn-primary" type="button" onclick="videoDisplay()">Videos</button>
-              <button class="btn btn-primary" type="button" onclick="channelDisplay()">Channels</button>
-              <button class="btn btn-primary" type="button" onclick="courseDisplay()">Courses</button>
+              <button class="btn btn-outline-primary" type="button" aria-pressed="true" onclick="videoDisplay()">Videos</button>
+              <button class="btn btn-outline-primary" type="button" onclick="channelDisplay()">Channels</button>
+              <button class="btn btn-outline-primary" type="button" onclick="courseDisplay()">Courses</button>
             </p>
 
             <div id="collapseVideos">
@@ -145,7 +140,7 @@
               </div>
             </div>
 
-            <div id="collapseChannels">
+            <div id="collapseChannels" style="display: none">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -171,7 +166,7 @@
               </div>
             </div>
 
-            <div id="collapseCourses">
+            <div id="collapseCourses" style="display: none;">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -210,15 +205,93 @@
             <h1>Explore</h1>
             <!-- tabby things -->
             <p>
-              <button class="btn btn-primary" type="button" onclick="allExploreDisplay()">All</button>
-              <button class="btn btn-primary" type="button" onclick="englishDisplay()">English</button>
-              <button class="btn btn-primary" type="button" onclick="mathDisplay()">Math</button>
-              <button class="btn btn-primary" type="button" onclick="scienceDisplay()">Science</button>
-              <button class="btn btn-primary" type="button" onclick="socialstudiesDisplay()">Social Studies</button>
-              <button class="btn btn-primary" type="button" onclick="artmusicDisplay()">Art & Music</button>
+              <button class="btn btn-outline-primary" type="button" onclick="allDisplay()" id="allButton">All</button>
+              <button class="btn btn-outline-primary" type="button" onclick="englishDisplay()" id="englishButton">English</button>
+              <button class="btn btn-outline-primary" type="button" onclick="mathDisplay()" id="mathButton">Math</button>
+              <button class="btn btn-outline-primary" type="button" onclick="scienceDisplay()" id="scienceButton">Science</button>
+              <button class="btn btn-outline-primary" type="button" onclick="socialstudiesDisplay()" id="socialstudiesButton">Social Studies</button>
+              <button class="btn btn-outline-primary" type="button" onclick="artmusicDisplay()" id="artmusicButton">Art & Music</button>
             </p>
 
-            <div id="collapseEnglish">
+            <div id="collapseAll">
+              <div class="card-deck">
+
+                  <div class="card-container">
+                    <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                    <div class="card">
+                      <div class="img">All Video 1</div>
+                      <div class="info">Pythagorean Theorem</div>
+                    </div>
+                    </a>
+                  </div>
+
+                  <div class="card-container">
+                    <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                    <div class="card">
+                      <div class="img">All Video 1</div>
+                      <div class="info">Pythagorean Theorem</div>
+                    </div>
+                    </a>
+                  </div>
+
+                  <div class="card-container">
+                    <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                    <div class="card">
+                      <div class="img">All Video 1</div>
+                      <div class="info">Pythagorean Theorem</div>
+                    </div>
+                    </a>
+                  </div>
+
+                  <div class="card-container">
+                    <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                    <div class="card">
+                      <div class="img">All Video 1</div>
+                      <div class="info">Pythagorean Theorem</div>
+                    </div>
+                    </a>
+                  </div>
+
+                  <div class="card-container">
+                    <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                    <div class="card">
+                      <div class="img">All Video 1</div>
+                      <div class="info">Pythagorean Theorem</div>
+                    </div>
+                    </a>
+                  </div>
+
+                  <div class="card-container">
+                    <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                    <div class="card">
+                      <div class="img">All Video 1</div>
+                      <div class="info">Pythagorean Theorem</div>
+                    </div>
+                    </a>
+                  </div>
+
+                  <div class="card-container">
+                    <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                    <div class="card">
+                      <div class="img">All Video 1</div>
+                      <div class="info">Pythagorean Theorem</div>
+                    </div>
+                    </a>
+                  </div>
+
+                  <div class="card-container">
+                    <a href="./viewingPage.html" target="_blank" style="text-decoration:none;">
+                    <div class="card">
+                      <div class="img">All Video 1</div>
+                      <div class="info">Pythagorean Theorem</div>
+                    </div>
+                    </a>
+                  </div>
+
+              </div>
+            </div>
+
+            <div id="collapseEnglish" style="display: none;">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -244,7 +317,7 @@
               </div>
             </div>
 
-            <div id="collapseMath">
+            <div id="collapseMath" style="display: none;">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -270,7 +343,7 @@
               </div>
             </div>
 
-            <div id="collapseScience">
+            <div id="collapseScience" style="display: none;">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -296,7 +369,7 @@
               </div>
             </div>
 
-            <div id="collapseSocialStudies">
+            <div id="collapseSocialStudies" style="display: none;">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -322,7 +395,7 @@
               </div>
             </div>
 
-            <div id="collapseArtMusic">
+            <div id="collapseArtMusic" style="display: none;">
               <div class="carousel-container2">
                 <div class="carousel-inner">
                   <div class="track2">
@@ -370,15 +443,6 @@
 
 
 <script>
-  function allSFLDisplay() {
-    var videos = document.getElementById('collapseVideos');
-    var channels = document.getElementById('collapseChannels');
-    var courses = document.getElementById('collapseCourses');
-    videos.style.display = 'block';
-    channels.style.display = 'block';
-    courses.style.display = 'block';
-  }
-
   function videoDisplay() {
     var videos = document.getElementById('collapseVideos');
     var channels = document.getElementById('collapseChannels');
@@ -408,17 +472,19 @@
 </script>
 
 <script>
-  function allExploreDisplay() {
+  function allDisplay() {
     var english = document.getElementById('collapseEnglish');
     var math = document.getElementById('collapseMath');
     var science = document.getElementById('collapseScience');
     var socialstudies = document.getElementById('collapseSocialStudies');
     var artmusic = document.getElementById('collapseArtMusic');
-    english.style.display = 'block';
-    math.style.display = 'block';
-    science.style.display = 'block';
-    socialstudies.style.display = 'block';
-    artmusic.style.display = 'block';
+    var all = document.getElementById('collapseAll');
+    english.style.display = 'none';
+    math.style.display = 'none';
+    science.style.display = 'none';
+    socialstudies.style.display = 'none';
+    artmusic.style.display = 'none';
+    all.style.display = 'block';
   }
 
   function englishDisplay() {
@@ -427,11 +493,13 @@
     var science = document.getElementById('collapseScience');
     var socialstudies = document.getElementById('collapseSocialStudies');
     var artmusic = document.getElementById('collapseArtMusic');
+    var all = document.getElementById('collapseAll');
     english.style.display = 'block';
     math.style.display = 'none';
     science.style.display = 'none';
     socialstudies.style.display = 'none';
     artmusic.style.display = 'none';
+    all.style.display = 'none';
   }
 
   function mathDisplay() {
@@ -440,11 +508,13 @@
     var science = document.getElementById('collapseScience');
     var socialstudies = document.getElementById('collapseSocialStudies');
     var artmusic = document.getElementById('collapseArtMusic');
+    var all = document.getElementById('collapseAll');
     english.style.display = 'none';
     math.style.display = 'block';
     science.style.display = 'none';
     socialstudies.style.display = 'none';
     artmusic.style.display = 'none';
+    all.style.display = 'none';
   }
 
   function scienceDisplay() {
@@ -453,11 +523,13 @@
     var science = document.getElementById('collapseScience');
     var socialstudies = document.getElementById('collapseSocialStudies');
     var artmusic = document.getElementById('collapseArtMusic');
+    var all = document.getElementById('collapseAll');
     english.style.display = 'none';
     math.style.display = 'none';
     science.style.display = 'block';
     socialstudies.style.display = 'none';
     artmusic.style.display = 'none';
+    all.style.display = 'none';
   }
 
   function socialstudiesDisplay() {
@@ -466,11 +538,13 @@
     var science = document.getElementById('collapseScience');
     var socialstudies = document.getElementById('collapseSocialStudies');
     var artmusic = document.getElementById('collapseArtMusic');
+    var all = document.getElementById('collapseAll');
     english.style.display = 'none';
     math.style.display = 'none';
     science.style.display = 'none';
     socialstudies.style.display = 'block';
     artmusic.style.display = 'none';
+    all.style.display = 'none';
   }
 
   function artmusicDisplay() {
@@ -479,11 +553,13 @@
     var science = document.getElementById('collapseScience');
     var socialstudies = document.getElementById('collapseSocialStudies');
     var artmusic = document.getElementById('collapseArtMusic');
+    var all = document.getElementById('collapseAll');
     english.style.display = 'none';
     math.style.display = 'none';
     science.style.display = 'none';
     socialstudies.style.display = 'none';
     artmusic.style.display = 'block';
+    all.style.display = 'none';
   }
 
 </script>
