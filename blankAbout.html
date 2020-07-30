@@ -21,7 +21,7 @@
 
   <!-- INTRO -->
 
-  <div class="page" id="top" style="height: auto; min-height: 100vh;" id="mission">
+  <div class="page" style="height: auto; min-height: 100vh;" id="intro">
 
   <div class="head row">
 
@@ -54,369 +54,191 @@
 
     <div class="header-link col-3" style="float: left;">
         <a class="header-link" href="./index-desktop.html#programs">Profile</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        <a class="header-link" href="./about.html">Create</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <a class="header-link" href="blankAbout.html">Create</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
         <a class="header-link" href="./index-desktop.html">Home</a> <p class="header-link">&nbsp;&nbsp;&nbsp;&nbsp;</p>
     </div>
 
-</div>
-
-<div class="contents">
-  <h1 class="p-hor">What content would you like to upload? </h1>
+  </div>
 
 
-    <form action=""> <!--Insert page to redirect user to-->
-      <input type="file" id="myFile" name="filename"></input> <br>
-      <input type="submit">Upload!</input>
-      <br><br>
+  <div class="contents">
+    <h1 class="p-hor">What content would you like to upload? </h1>
+
+    <form action="about.html"> <!--Insert page to redirect user to-->
+      <input type="file" id="myFile" name="filename">
+      <br>
+      <input type="submit">Upload your video here</input>
     </form>
-    <form>
-      <div class="form-group">
 
-        <input type="text" id="titleField" name="enterName" value="" placeholder="Enter video title here">
-        <br>
-      </div>
-    </form>
-    <style>
-      #titleField {
-        width: 300px;
-      }
-    </style>
+<br><br>
+    <p>Input your video title here</p>
+      <form>
+        <div class="form-group">
+          <input type="title" class="form-control" id="inputVideoTitle" aria-describedby="emailHelp" placeholder="Video Title" rows=3>
+        </div>
+      </form>
 
-    <div class="leftAlign">
+
+
+
+      <!-- !!!!begin left side!!!! -->
       <p>Your current video that you are about to upload</p>
 
       <iframe id="videoIFrame" src="" title="Iframe Example"></iframe>
 
-      <style>
-        .leftAlign {
-          text-align: left;
-        }
-
+      <!-- <style>
         #videoIFrame {
           max-width: 60%;
-          height: 400px;
+          max-height: 60%;
         }
-      </style>
-    </div>
+      </style> -->
 
+      <!-- !!!!end left side!!!! -->
 
-    <div class="rightAlign">
+      <!-- !!!!begin right side!!!! -->
       <div class="form-group">
-        <p>Please enter your video description here </p>
-        <textarea name="Text1" cols="60" rows="10"></textarea>
+        <p id="description"><strong>Description: </strong></p>
+        <textarea name="Text1" style="width:100%" placeholder="Enter a description for the video"></textarea>
       </div>
-    </div>
-    <style>
-    .rightAlign {
-      float: right;
-    }
-    </style>
 
-</div>
-</div>
-
-<div class="page" id="additional">
+      <!--A little bit of js to make the video proportional to the size of the screen  <-->
 
 
-<div  class="contents">
-  <div class="input-group input-group-lg">
-    <input type="text" class="form-control" id="textbox" placeholder="Ex: Algebra" aria-label="Large"
-      aria-describedby="inputGroup-sizing-sm">
-    <input type="submit" id="btnAdd" onclick="add()" class="btn btn-success">
-  </div>
 
-  <p id="tagList">Tags:</p>
 
-  <script>
-    var possibleTags = ["Algebra", "Stoichiometry", "Pythagorean", "Being Dumb", "Euclidean Geometry", "Counting", "Reading", "Literary Analysis", "Magnetism", "Feeding a Cat", "Writing"];
-    var currentTags = [];
-    var suggestedTags = [];
 
-    function add() {
-      var newTag = document.createElement("button");
-      var newVal = document.getElementById("textbox").value;
-      newTag.id = newVal;
-      newTag.textContent = newVal;
-      newTag.className = "btn btn-warning";
-      newTag.onclick = function () { remove(newTag) };
+      <!-- Tags -->
+      <div class="input-group input-group-md" style="margin-bottom: 10px;">
+        <input type="text" class="form-control" id="textbox" placeholder="Ex: Algebra" aria-label="Large"
+          aria-describedby="inputGroup-sizing-sm" style="border-radius: 5px;">
+        <input type="submit" value="Add tag" id="btnAdd" onclick="add()" class="btn btn-success" style="margin-left: 10px;">
+      </div>
 
-      var tags = document.getElementById("tagList");
-      if (possibleTags.includes(newVal)) {
-        if (!currentTags.includes(newVal)) {
-          currentTags.push(newVal);
-          tags.appendChild(newTag);
-        }
-      }
-      genSuggested();
-    }
-
-    function remove(old_tag) {
-      var tags = document.getElementById("tagList");
-      tags.removeChild(old_tag);
-      var newTags = [];
-      var i;
-      for (i = 0; i < currentTags.length; i++) {
-        if (currentTags[i] != old_tag.id) {
-          newTags.push(currentTags[i]);
-        }
-      }
-      currentTags = newTags;
-      genSuggested();
-    }
-
-    function genSuggested() {
-      var tags = document.getElementById("suggestedList");
-      var h;
-      for (h = 0; h < Math.min(5, suggestedTags.length); h++) {
-        var sugg = document.getElementById(suggestedTags[h] + "_sug");
-        tags.removeChild(sugg);
-      }
-      suggestedTags = [];
-      var i;
-      for (i = 0; i < possibleTags.length; i++) {
-        if (!currentTags.includes(possibleTags[i])) {
-          suggestedTags.push(possibleTags[i]);
-        }
-      }
-      tagAlg(document.getElementById("transcript"));
-      var j;
-      for (j = 0; j < Math.min(5, suggestedTags.length); j++) {
-        addSuggest(suggestedTags[j]);
-      }
-    }
-
-    function tagAlg(transcript) {
-      shuffle(suggestedTags)
-    }
-
-    function addSuggest(newVal) {
-      var newTag = document.createElement("button");
-      newTag.id = newVal + "_sug";
-      newTag.textContent = newVal;
-      newTag.className = "btn btn-outline-warning";
-      newTag.onclick = function () { addFromTag(newVal) };
-
-      var tags = document.getElementById("suggestedList");
-      tags.appendChild(newTag);
-    }
-
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    }
-
-    function addFromTag(newVal) {
-      var newTag = document.createElement("button");
-      newTag.id = newVal;
-      newTag.textContent = newVal;
-      newTag.className = "btn btn-warning";
-      newTag.onclick = function () { remove(newTag) };
-
-      var tags = document.getElementById("tagList");
-      if (possibleTags.includes(newVal)) {
-        if (!currentTags.includes(newVal)) {
-          currentTags.push(newVal);
-          tags.appendChild(newTag);
-        }
-      }
-      genSuggested();
-    }
-
-  </script>
-
-  <p id="suggestedList">Suggested Tags:</p>
-
-  <p id="transcript"></p>
-
-  <br>
-  <button type="submit" class="btn btn-primary">Submit</button>
-
-</div>
-</div>
-
-<!-- COMMENTS SECTION -->
-
-    <div class="contents">
-      <div>
-
-      <h2>Leave us a comment!</h2>
-
-      <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-      <script src="js/firebaseMessage.js"></script>
-      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
+      <p id="tagList"><strong>Tags:</strong></p>
 
       <script>
-        function load()  {
-            updateDisplay();
+        var possibleTags = ["Algebra", "Pythagorean Theorem", "Geometry", "Triangles", "Multiplication", "Substitution", "Math"];
+        var currentTags = [];
+        var suggestedTags = [];
+
+        function add() {
+          var newTag = document.createElement("button");
+          var newVal = document.getElementById("textbox").value;
+          newTag.id = newVal;
+          newTag.textContent = newVal;
+          newTag.className = "btn btn-info";
+          newTag.onclick = function () { remove(newTag) };
+
+          var tags = document.getElementById("tagList");
+          if (possibleTags.includes(newVal)) {
+            if (!currentTags.includes(newVal)) {
+              currentTags.push(newVal);
+              tags.appendChild(newTag);
+            }
+          }
+          genSuggested();
+        }
+
+        function remove(old_tag) {
+          var tags = document.getElementById("tagList");
+          tags.removeChild(old_tag);
+          var newTags = [];
+          var i;
+          for (i = 0; i < currentTags.length; i++) {
+            if (currentTags[i] != old_tag.id) {
+              newTags.push(currentTags[i]);
+            }
+          }
+          currentTags = newTags;
+          genSuggested();
+        }
+
+        function genSuggested() {
+          var tags = document.getElementById("suggestedList");
+          var h;
+          for (h = 0; h < Math.min(5, suggestedTags.length); h++) {
+            var sugg = document.getElementById(suggestedTags[h] + "_sug");
+            tags.removeChild(sugg);
+          }
+          suggestedTags = [];
+          var i;
+          for (i = 0; i < possibleTags.length; i++) {
+            if (!currentTags.includes(possibleTags[i])) {
+              suggestedTags.push(possibleTags[i]);
+            }
+          }
+          tagAlg(document.getElementById("transcript"));
+          var j;
+          for (j = 0; j < Math.min(5, suggestedTags.length); j++) {
+            addSuggest(suggestedTags[j]);
+          }
+        }
+
+        function tagAlg(transcript) {
 
         }
-        window.onload = load;
-      </script>
 
-      <div class="form-row">
-        <div class="col-6">
-        <p>Name</p>
-        <select type="text" class="form-control p" id='messageNameField' value='' name="enterName">
-          <option value="Omar Elbarmawi">Omar Elbarmawi</option>
-          <option value="Anonymous">Anonymous</option>
-        </select><br/>
-        </div>
-        <div class="col-6">
-        <p>Rating</p>
-        <select type="text" class="custom-select p" id='messageRatingField' style="text-align: left; color: #0f62fe;" value='' name="enterText">
-          <option value="★☆☆☆☆">★☆☆☆☆</option>
-          <option value="★★☆☆☆">★★☆☆☆</option>
-          <option value="★★★☆☆">★★★☆☆</option>
-          <option value="★★★★☆">★★★★☆</option>
-          <option selected value="★★★★★">★★★★★</option>
-        </select><br/>
-        </div>
-        <div class="col-12">
-        <p>Message</p>
-        <textarea type="text" class="form-control p" id='messageTextField' style="height: 100px; text-align: left;" value='' name="enterText"></textarea><br/>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary" onClick="writeFunction()">Share</button>
-      <br/><br/><br/><br/>
+        function addSuggest(newVal) {
+          var newTag = document.createElement("button");
+          newTag.id = newVal + "_sug";
+          newTag.textContent = newVal;
+          newTag.className = "btn btn-outline-info";
+          newTag.onclick = function () { addFromTag(newVal) };
 
-    <h3><p>Comments</h3>
-    <div id="messageList">
-    </div>
-    <br/>
+          var tags = document.getElementById("suggestedList");
+          tags.appendChild(newTag);
+        }
 
-
-    <div class="arrow-up">
-        <a href="./blankAbout.html#top"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
-
-      </div>
-
-      <div>
-
-        <div class="input-group input-group-lg">
-          <input type="text" class="form-control" id="textbox" placeholder="Ex: Algebra" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-          <input type="submit" id="btnAdd" onclick="add()" class="btn btn-success">
-        </div>
-
-        <p id="tagList">Tags:</p>
-
-        <script>
-          var possibleTags = ["Algebra", "Stoichiometry", "Pythagorean", "Being Dumb", "Euclidean Geometry", "Counting", "Reading", "Literary Analysis", "Magnetism", "Feeding a Cat", "Writing"];
-          var currentTags = [];
-          var suggestedTags = [];
-
-          function add() {
-            var newTag = document.createElement("button");
-            var newVal = document.getElementById("textbox").value;
-            newTag.id = newVal;
-            newTag.textContent = newVal;
-            newTag.className = "btn btn-warning";
-            newTag.onclick = function () { remove(newTag) };
-
-            var tags = document.getElementById("tagList");
-            if (possibleTags.includes(newVal)) {
-              if (!currentTags.includes(newVal)) {
-                currentTags.push(newVal);
-                tags.appendChild(newTag);
-              }
-            }
-            genSuggested();
+        function shuffle(array) {
+          for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
           }
+        }
 
-          function remove(old_tag) {
-            var tags = document.getElementById("tagList");
-            tags.removeChild(old_tag);
-            var newTags = [];
-            var i;
-            for (i = 0; i < currentTags.length; i++) {
-              if (currentTags[i] != old_tag.id) {
-                newTags.push(currentTags[i]);
-              }
-            }
-            currentTags = newTags;
-            genSuggested();
-          }
+        function addFromTag(newVal) {
+          var newTag = document.createElement("button");
+          newTag.id = newVal;
+          newTag.textContent = newVal;
+          newTag.className = "btn btn-info";
+          newTag.onclick = function () { remove(newTag) };
 
-          function genSuggested() {
-            var tags = document.getElementById("suggestedList");
-            var h;
-            for (h = 0; h < Math.min(5, suggestedTags.length); h++) {
-              var sugg = document.getElementById(suggestedTags[h] + "_sug");
-              tags.removeChild(sugg);
-            }
-            suggestedTags = [];
-            var i;
-            for (i = 0; i < possibleTags.length; i++) {
-              if (!currentTags.includes(possibleTags[i])) {
-                suggestedTags.push(possibleTags[i]);
-              }
-            }
-            tagAlg(document.getElementById("transcript"));
-            var j;
-            for (j = 0; j < Math.min(5, suggestedTags.length); j++) {
-              addSuggest(suggestedTags[j]);
+          var tags = document.getElementById("tagList");
+          if (possibleTags.includes(newVal)) {
+            if (!currentTags.includes(newVal)) {
+              currentTags.push(newVal);
+              tags.appendChild(newTag);
             }
           }
-
-          function tagAlg(transcript) {
-            shuffle(suggestedTags)
-          }
-
-          function addSuggest(newVal) {
-            var newTag = document.createElement("button");
-            newTag.id = newVal + "_sug";
-            newTag.textContent = newVal;
-            newTag.className = "btn btn-outline-warning";
-            newTag.onclick = function () { addFromTag(newVal) };
-
-            var tags = document.getElementById("suggestedList");
-            tags.appendChild(newTag);
-          }
-
-          function shuffle(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-              let j = Math.floor(Math.random() * (i + 1));
-              [array[i], array[j]] = [array[j], array[i]];
-            }
-          }
-
-          function addFromTag(newVal) {
-            var newTag = document.createElement("button");
-            newTag.id = newVal;
-            newTag.textContent = newVal;
-            newTag.className = "btn btn-warning";
-            newTag.onclick = function () { remove(newTag) };
-
-            var tags = document.getElementById("tagList");
-            if (possibleTags.includes(newVal)) {
-              if (!currentTags.includes(newVal)) {
-                currentTags.push(newVal);
-                tags.appendChild(newTag);
-              }
-            }
-            genSuggested();
-          }
+          genSuggested();
+        }
 
         </script>
 
-        <p id="suggestedList">Suggested Tags:</p>
+        <p id="suggestedList"><strong>Suggested Tags:</strong></p>
+
 
         <p id="transcript"></p>
 
-      </div>
+        <!-- !!!!end right side!!!! -->
+
+      <!-- Upload video  -->
+      <form>
+         <input type="submit" formaction="about.html">Upload your video!</input>
+      </form>
 
 
-    <div class="arrow-up center">
-        <a href="./about.html#mission"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
-    </div>
 
-    </div>
-  </br></br>
 
-  <!-- </div>
-</div> -->
+
+      </br></br>
+      <div class="arrow-up">
+        <a href="./about.html#intro"><img class="arrow-up" src="./media/arrow-up-18.png"></img></a>
+        <div>
+        </br></br></br>
+  </div>
+
+</div>
 
   <!-- FOOTER -->
 
